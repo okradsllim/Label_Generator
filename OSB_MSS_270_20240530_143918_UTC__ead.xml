@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" findaidstatus="completed" langencoding="iso639-2b" repositoryencoding="iso15511">
+    <eadid countrycode="US" mainagencycode="US-CtY-BR" url="https://hdl.handle.net/10079/fa/beinecke.gaust">beinecke.gaust</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper type="filing">Aust (George) Papers</titleproper>
+        <titleproper>Guide to the George Aust Papers <num>OSB MSS 270</num>
+        </titleproper>
+        <author>by Nora Soto</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Beinecke Rare Book and Manuscript Library</publisher>
+        <p>
+          <date>August 2021</date>
+        </p>
+        <address>
+          <addressline>P. O. Box 208330</addressline>
+          <addressline>New Haven, CT 06520-8330</addressline>
+          <addressline>Telephone: (203) 432-2977 </addressline>
+          <addressline>beinecke.library@yale.edu</addressline>
+          <addressline>URL: <extptr xlink:href="http://beinecke.library.yale.edu/" xlink:show="new" xlink:title="http://beinecke.library.yale.edu/" xlink:type="simple"/>
+          </addressline>
+        </address>
+      </publicationstmt>
+    </filedesc>
+    <profiledesc>
+      <creation>This finding aid was produced using ArchivesSpace on <date>2024-05-30 14:39:22 UTC</date>.
+      </creation>
+      <langusage>Finding aid written in English.</langusage>
+      <descrules>Describing Archives: A Content Standard</descrules>
+    </profiledesc>
+  </eadheader>
+  <archdesc level="collection">
+    <did>
+      <repository>
+        <corpname>Beinecke Rare Book and Manuscript Library</corpname>
+      </repository>
+      <unittitle>George Aust papers</unittitle>
+      <origination label="Creator">
+        <persname rules="local" source="local">Aust, George, 1741-1829</persname>
+      </origination>
+      <unitid>OSB MSS 270</unitid>
+      <physdesc altrender="whole">
+        <extent altrender="materialtype spaceoccupied">7.5 Linear Feet</extent>
+        <extent altrender="carrier">(10 boxes)</extent>
+      </physdesc>
+      <unitdate datechar="creation" normal="1746/1837" type="inclusive">1746-1837</unitdate>
+      <unitdate datechar="creation" normal="1762/1827" type="bulk">1762-1827</unitdate>
+      <langmaterial id="aspace_dd50c699797f484b0b194e5015e030bf">In English and French.</langmaterial>
+    </did>
+    <accessrestrict id="aspace_6ee760fb9c23fd8d239632e61e7f849f">
+      <head>Conditions Governing Access</head>
+      <p>This collection is open for research.</p>
+    </accessrestrict>
+    <acqinfo id="aspace_456bb12336c738d3e48f75809031785b">
+      <head>Immediate Source of Acquisition</head>
+      <p>Purchased from Arthur Freeman on the James Marshall and Marie-Louise Osborn Collection Fund, 2002.</p>
+    </acqinfo>
+    <arrangement id="aspace_9e167c97f4c9916088beeee711d75409">
+      <head>Arrangement</head>
+      <p>Organized into four series: I. Professional Papers, 1763-1827. II. Personal Papers, 1746-1837. III. Correspondence and Other Papers, 1762-1815. IV. Collection Inventories, undated.</p>
+    </arrangement>
+    <bioghist id="aspace_962e469ef1c61c9b4ea4fe9745d705e5">
+      <head>George Aust (1741-1829) </head>
+      <p>George Aust was an English civil servant in the office of the Secretary of State in Great Britain during the reign of King George III. He was born in 1741 near Bath, England. After moving to London, he began his government career in 1763 as a clerk for the Northern Department of the Secretary of State, which would be reorganized as the Foreign Office in 1782. Aust was promoted to senior clerk in 1780 and appointed deputy writer of the official government journal <title>London Gazette</title> by 1781. In 1790, he was appointed Under-Secretary of State for Foreign Affairs, a position shared with Sir James Bland Burges, where Aust's responsibilities included the fiscal administration of the Secret Service under Lord William Wyndham Grenville, then Foreign Secretary. Upon retirement in 1796, Aust was appointed Commissary General of Musters and Secretary to the Trustees of Royal Hospital Chelsea, and later served as Secretary to the Westminster Hospital until 1826.</p>
+      <p>Aust was married three times and remained childless. Little is known about his first wife, who died in 1803. In November 1803, Aust married Sarah Murray (1744-1811), a topographical writer who published two travel books about Scotland. Sarah was previously married to William Murray, son of the third Earl of Dunmore, from 1783 until his death in 1786. Aust subsequently married Catherine Feaver in 1813. He lived in the West End and Chelsea districts of London, where he died in 1829.</p>
+    </bioghist>
+    <prefercite id="aspace_9db751c32f9207f194e6060544a18dbf">
+      <head>Preferred Citation</head>
+      <p>George Aust Papers. James Marshall and Marie-Louise Osborn Collection, Beinecke Rare Book and Manuscript Library, Yale University.</p>
+    </prefercite>
+    <processinfo id="aspace_04ec271be7081bfcd999913f0fc45169">
+      <head>Processing Information</head>
+      <p>Collections are processed to a variety of levels, depending on the work necessary to make them usable, their perceived research value, the availability of staff, competing priorities, and whether or not further accruals are expected.  The library attempts to provide a basic level of preservation and access for all collections as they are acquired, and does more extensive processing of higher priority collections as time and resources permit.</p>
+      <p>This collection received a basic level of processing, including rehousing and minimal organization.</p>
+      <p>Information included in the Description of Papers note and Collection Contents section is drawn from information supplied with the collection and from an initial survey of the contents. Folder titles appearing in the contents list below are often based on those provided by the creator or previous custodian. Titles have not been verified against the contents of the folders in all cases. Otherwise, folder titles are supplied by staff during initial processing.</p>
+      <p>This finding aid may be updated periodically to account for new acquisitions to the collection and/or revisions in arrangement and description.</p>
+    </processinfo>
+    <relatedmaterial id="aspace_f6e2fefe57f3765c57f819c9e0142002">
+      <head>Associated Materials</head>
+      <p>
+        <extref xlink:actuate="onrequest" xlink:href="https://hdl.handle.net/10079/bibid/9069415">George Aust papers concerning the Secret Service, 1794-1800 (OSB MSS 148).</extref> Beinecke Rare Book and Manuscript Library, Yale University.</p>
+    </relatedmaterial>
+    <userestrict id="aspace_8654df2c29bb83899378768b1c2da8b9">
+      <head>Conditions Governing Use</head>
+      <p>The George Aust Papers is the physical property of the Beinecke Rare Book and Manuscript Library, Yale University. Literary rights, including copyright, belong to the authors or their legal heirs and assigns. For further information, consult the appropriate curator.</p>
+    </userestrict>
+    <scopecontent id="aspace_c7b653bb6ac547814762e8ccc43441a6">
+      <head>Scope and Contents</head>
+      <p>The George Aust Papers consists of professional papers, legal and financial records, professional and personal correspondence, and other documents pertaining to the life and work of British civil servant George Aust. Aust's papers document his career of over fifty years in government service, including his position as Under-Secretary of State for Foreign Affairs from 1790 to 1796. Correspondents include his wife Sarah Murray Aust; William Eden, first Baron Auckland; Sir James Bland Burges; Thomas Bowdler; Lord William Wyndam Grenville; William Augustus Miles; Lady Barbara Montagu; John Osborn; Bishop Thomas Percy; Sarah Scott; and Philip Yorke, second Earl of Hardwicke. The collection spans the years 1746-1837, with the bulk of the material dating from 1762-1827.</p>
+    </scopecontent>
+    <controlaccess>
+      <subject authfilenumber="http://id.loc.gov/authorities/subjects/sh2008101076" source="lcsh">Civil service -- Great Britain</subject>
+      <subject authfilenumber="http://id.loc.gov/authorities/subjects/sh85038179" source="lcsh">Diplomacy</subject>
+      <subject source="local_beinecke">Government employees, English</subject>
+      <geogname authfilenumber="http://id.loc.gov/authorities/subjects/sh85056816" source="lcsh">Great Britain -- History -- George III, 1760-1820</geogname>
+      <geogname source="local">Great Britain -- Officials and employees</geogname>
+      <geogname authfilenumber="http://id.loc.gov/authorities/subjects/sh85056908" source="lcsh">Great Britain -- Politics and government -- 1760-1820</geogname>
+      <genreform authfilenumber="http://vocab.getty.edu/aat/300027483" source="aat">Account books</genreform>
+      <genreform source="local">Account books -- Great Britain -- 19th century</genreform>
+      <genreform authfilenumber="http://vocab.getty.edu/aat/300141693" source="aat">Business records</genreform>
+      <genreform authfilenumber="http://vocab.getty.edu/aat/300027868" source="aat">Probate records</genreform>
+      <genreform authfilenumber="http://vocab.getty.edu/aat/300027573" source="aat">Receipts (financial records) </genreform>
+      <genreform authfilenumber="http://vocab.getty.edu/aat/300027764" source="aat">Wills</genreform>
+      <occupation source="local_beinecke">Government employees -- Great Britain</occupation>
+      <persname>Auckland, William Eden, Baron, 1744-1814</persname>
+      <persname rules="local" source="local">Aust, George, 1741-1829</persname>
+      <persname>Bowdler, Thomas, 1754-1825</persname>
+      <persname>Burges, James Bland, Sir, 1752-1824</persname>
+      <persname>Grenville, William Wyndham Grenville, Baron, 1759-1834</persname>
+      <persname>Hardwicke, Philip Yorke, Earl of, 1720-1790</persname>
+      <persname>Miles, William Augustus, 1753?-1817</persname>
+      <persname>Montagu, Barbara, -1765</persname>
+      <persname>Murray, Sarah, 1744-1811</persname>
+      <persname rules="rda">Osborn, John, 1743-1814</persname>
+      <persname>Percy, Thomas, 1729-1811</persname>
+      <persname>Scott, Sarah, 1720-1795</persname>
+      <corpname>Great Britain. Foreign Office -- Officials and employees</corpname>
+      <corpname>Royal Hospital (Chelsea, London, England)</corpname>
+      <corpname>Westminster Hospital</corpname>
+    </controlaccess>
+    <dsc>
+      <c01 id="aspace_615806a4dadc9a94c2fc8d5af1f51057" level="series">
+        <did>
+          <unittitle>Professional Papers</unittitle>
+          <unitid>1</unitid>
+          <physdesc altrender="whole">
+            <extent altrender="materialtype spaceoccupied">2.5 Linear Feet</extent>
+            <extent altrender="carrier">(3 boxes)</extent>
+          </physdesc>
+          <unitdate datechar="creation" normal="1763/1827" type="inclusive">1763–1827</unitdate>
+        </did>
+        <scopecontent id="aspace_95a70dab0939e18887b1eea3abaed7b4">
+          <head>Scope and Contents</head>
+          <p>Professional Papers consists of documents related to Aust's civil service career in the Secretary of State for the Northern Department (which became the Foreign Office in 1782) from 1763 to 1796, particularly his appointment as Under-Secretary of State for Foreign Affairs, as well as later positions at the Commissary General of Musters office, Royal Hospital Chelsea, and the Westminster Hospital. Files include official documents, drafts, memoranda, lists, administrative records, financial records, salary negotiations, and professional correspondence concerning diplomatic work, foreign affairs, politics, the military, and veteran's pensions. Correspondents include diplomats, statesmen, and other government officials, such as Lord William Wyndham Grenville, then Foreign Secretary; Sir James Bland Burges; and William Eden, first Baron Auckland.</p>
+          <p>  "The diamond snuffbox affair," as documented in the collection inventory in Series IV, refers to an incident during Aust's tenure as Under-Secretary of State, wherein fellow Under-Secretary Sir James Bland Burges received a cash gift and diamond-studded snuffbox in an exchange of diplomatic gifts with Russia, while Aust received nothing.</p>
+        </scopecontent>
+        <arrangement id="aspace_10fe233f3fc703440cdee446ada55ab4">
+          <head>Arrangement</head>
+          <p>Arranged in chronological order, with files grouped by office held. Correspondence is filed at the end of the sequence.</p>
+        </arrangement>
+        <c02 id="aspace_76f94e3b9a18b6eb16a2e0f58d139aaf" level="file">
+          <did>
+            <unittitle>Secretary of State for the Northern Department and Foreign Office</unittitle>
+          </did>
+          <c03 id="aspace_a42c130997142750fb3d983d2b368e01" level="item">
+            <did>
+              <unittitle>"Titles of Foreign Princes as addressed by His Majesty," and "Forms of the Address and Superscription used by His Majesty in his Cachette Letters to the several Crowned Heads and Princes of Europe"</unittitle>
+              <unitdate datechar="creation" normal="1763/1763" type="inclusive">1763, undated</unitdate>
+              <container altrender="archive legal" id="aspace_27d122083d74a8caed7b011d4366fafe" label="Mixed Materials [39002140838054]" type="Box">1</container>
+              <container id="aspace_c1b35104b3ad5bcf39aa6a7271492209" parent="aspace_27d122083d74a8caed7b011d4366fafe" type="folder">1</container>
+            </did>
+          </c03>
+          <c03 id="aspace_9bb2eb59d06c6cde85f3d85061959481" level="item">
+            <did>
+              <unittitle>"A Bishop's Oath of Allegiance," draft</unittitle>
+              <unitdate datechar="creation" type="inclusive">[1779?]</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_f343ee924da4539a3c31f0059c13de3c" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_cc9586bb51edfed10646159915416735" parent="aspace_f343ee924da4539a3c31f0059c13de3c" type="folder">108</container>
+            </did>
+          </c03>
+          <c03 id="aspace_35dd1fdfe46a97813be58fda83b6b3f7" level="item">
+            <did>
+              <unittitle>Letters from William Eden, first Baron Auckland, with letters from Francis Freeling, Lord Grenville, Viscount Bute, and Sir James Marriott</unittitle>
+              <unitdate datechar="creation" normal="1791/1800" type="inclusive">1791–1800</unitdate>
+              <container altrender="archive legal" id="aspace_f53b6c8d50c63b295cdb66be2de9ec9c" label="Mixed Materials [39002140838054]" type="Box">1</container>
+              <container id="aspace_e4d37999115abecad1ac3b63ad63a42b" parent="aspace_f53b6c8d50c63b295cdb66be2de9ec9c" type="folder">2</container>
+            </did>
+          </c03>
+          <c03 id="aspace_f50628d1e9e0a486a0e71ec7c672e9e2" level="item">
+            <did>
+              <unittitle>"The diamond snuffbox affair," concerning gifts from Catherine the Great to English diplomats, with letters from Sir James Bland Burges, and Louis Dutens</unittitle>
+              <unitdate datechar="creation" normal="1795/1796" type="inclusive">1795–1796</unitdate>
+              <container altrender="archive legal" id="aspace_b89feff9d08ff9cf37e7bb21d5dc89e7" label="Mixed Materials [39002140838054]" type="Box">1</container>
+              <container id="aspace_ad505eb4b9a23a59f22a26986a82756a" parent="aspace_b89feff9d08ff9cf37e7bb21d5dc89e7" type="folder">3</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_641a69449f3a755e051cac6cb89e5fa9" level="file">
+          <did>
+            <unittitle>Commissary General of Musters office</unittitle>
+            <unitdate datechar="creation" normal="1796/1827" type="inclusive">1796–1827, undated</unitdate>
+            <container altrender="archive legal" id="aspace_ef27b535b4553930049de9744204e694" label="Mixed Materials [39002140838054]" type="Box">1</container>
+            <container id="aspace_6cf252d7a11943c21d054cc11d9762e4" parent="aspace_ef27b535b4553930049de9744204e694" type="folder">4-9</container>
+          </did>
+        </c02>
+        <c02 id="aspace_67598a3778189a32963455eec3d2cf53" level="file">
+          <did>
+            <unittitle>Commissary General of Musters office</unittitle>
+            <unitdate datechar="creation" normal="1805/1805" type="inclusive">1805</unitdate>
+            <container altrender="flat box (17d 1h 21w)" id="aspace_1c5e2df4d1ea1e1e73a5035d75f86b1f" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+            <container id="aspace_936b7fe1c76c56e83deb5fb6a95adc91" parent="aspace_1c5e2df4d1ea1e1e73a5035d75f86b1f" type="folder">107</container>
+          </did>
+        </c02>
+        <c02 id="aspace_e0a37897523f54e059405eab5a798cc2" level="file">
+          <did>
+            <unittitle>Commissary General of Musters, on account of fees and contingencies of the said office</unittitle>
+            <unitdate datechar="creation" normal="1812/1818" type="inclusive">1812–1818</unitdate>
+            <container altrender="archive legal" id="aspace_80a5639b541a628a73696197158e924f" label="Mixed Materials [39002140838054]" type="Box">1</container>
+            <container id="aspace_e41195275bcc8bc00eff1e8befbfa1a9" parent="aspace_80a5639b541a628a73696197158e924f" type="folder">10</container>
+          </did>
+        </c02>
+        <c02 id="aspace_2ab3035f69661cc73b7bdf39a611444e" level="file">
+          <did>
+            <unittitle>Royal Hospital Chelsea</unittitle>
+            <unitdate datechar="creation" normal="1808/1814" type="inclusive">1808–1814, undated</unitdate>
+            <container altrender="archive legal" id="aspace_f5582f2139a853af48fed31fc1762a65" label="Mixed Materials [39002140838054]" type="Box">1</container>
+            <container id="aspace_eec3f02f5e057e50cf0c4fc2b85ead60" parent="aspace_f5582f2139a853af48fed31fc1762a65" type="folder">11-12</container>
+          </did>
+        </c02>
+        <c02 id="aspace_49b042f8f041aeff39af291cd0ca3aa2" level="file">
+          <did>
+            <unittitle>Royal Hospital Chelsea</unittitle>
+            <unitdate datechar="creation" normal="1807/1807" type="inclusive">1807</unitdate>
+            <container altrender="flat box (17d 1h 21w)" id="aspace_6cfd6fd54913b96d0e6f166a14feb60f" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+            <container id="aspace_a6df6c80f04dd17172cb8889ed28c216" parent="aspace_6cfd6fd54913b96d0e6f166a14feb60f" type="folder">109</container>
+          </did>
+        </c02>
+        <c02 id="aspace_b3b240d7dd65e103afb7cfc158698230" level="file">
+          <did>
+            <unittitle>Royal Hospital Chelsea, supplications by or on behalf of military men</unittitle>
+            <unitdate datechar="creation" normal="1795/1826" type="inclusive">1795–1826, undated</unitdate>
+            <container altrender="archive legal" id="aspace_44ec24f492ff991cfbcb6fe7a2021021" label="Mixed Materials [39002140838062]" type="Box">2</container>
+            <container id="aspace_6db119a2370ff9fdfc3c36aee5fe4223" parent="aspace_44ec24f492ff991cfbcb6fe7a2021021" type="folder">13-15</container>
+          </did>
+        </c02>
+        <c02 id="aspace_80d08f0534b44c6d2351859af4a3f472" level="file">
+          <did>
+            <unittitle>The Westminster Hospital</unittitle>
+            <unitdate datechar="creation" normal="1823/1826" type="inclusive">1823–1826, undated</unitdate>
+            <container altrender="archive legal" id="aspace_f54347e36217771607bae96210ff2842" label="Mixed Materials [39002140838062]" type="Box">2</container>
+            <container id="aspace_b1518d613a4b28199d036b99814e4105" parent="aspace_f54347e36217771607bae96210ff2842" type="folder">16</container>
+          </did>
+        </c02>
+        <c02 id="aspace_29caad51c109efaaa977bda7bf3a6755" level="file">
+          <did>
+            <unittitle>Salary negotiations with the War Department, with letters from Lord Palmerston and Nicholas Vansittart</unittitle>
+            <unitdate datechar="creation" normal="1812/1822" type="inclusive">1812–1822, undated</unitdate>
+            <container altrender="archive legal" id="aspace_e9aeb88d12f56016b2ca64b3c44460eb" label="Mixed Materials [39002140838062]" type="Box">2</container>
+            <container id="aspace_c4c44b62a0b5129fbe6a1fdde0457137" parent="aspace_e9aeb88d12f56016b2ca64b3c44460eb" type="folder">17-19</container>
+          </did>
+        </c02>
+        <c02 id="aspace_b46d9cc3c0a2bb58655f85d95a27dfff" level="file">
+          <did>
+            <unittitle>Correspondence</unittitle>
+          </did>
+          <c03 id="aspace_af20b29ee9374bf8ea9e871571235f85" level="item">
+            <did>
+              <unittitle>Letter from Morton Eden, first Baron Henley</unittitle>
+              <unitdate datechar="creation" normal="1793-06-15/1793-06-15" type="inclusive">1793 June 15</unitdate>
+              <container altrender="archive legal" id="aspace_bc1592d75bdbc11ff56d31d366b2aeca" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_e895e3315c0afb3fac91af4b2582643a" parent="aspace_bc1592d75bdbc11ff56d31d366b2aeca" type="folder">20</container>
+            </did>
+          </c03>
+          <c03 id="aspace_aa230e9bfd45e2c9a31dad65f8d0293c" level="item">
+            <did>
+              <unittitle>Letter from Sir Richard Clayton</unittitle>
+              <unitdate datechar="creation" normal="1797-11-10/1797-11-10" type="inclusive">1797 November 10</unitdate>
+              <container altrender="archive legal" id="aspace_15f91bab1548910d8d49ecdb04bebfe7" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_0c52c5e20c40ce96a89b96a3ad0c6762" parent="aspace_15f91bab1548910d8d49ecdb04bebfe7" type="folder">21</container>
+            </did>
+          </c03>
+          <c03 id="aspace_4e0db2e04186639982b48264b2b9ea81" level="item">
+            <did>
+              <unittitle>Letter from John Waliot, with mention of Napoleon Bonaparte</unittitle>
+              <unitdate datechar="creation" normal="1802-02-21/1802-02-21" type="inclusive">1802 February 21</unitdate>
+              <container altrender="archive legal" id="aspace_02b7c0492322601a8457d497a3092682" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_2a417131a25584d20d011100f19e24e1" parent="aspace_02b7c0492322601a8457d497a3092682" type="folder">22</container>
+            </did>
+          </c03>
+          <c03 id="aspace_74865ed9d2f27c76fd8336a864c32577" level="item">
+            <did>
+              <unittitle>Letter from George Aust to George Canning</unittitle>
+              <unitdate datechar="creation" normal="1804-11-08/1804-11-08" type="inclusive">1804 November 8</unitdate>
+              <container altrender="archive legal" id="aspace_3ff324cff07e2dc05ab520c7d3367e33" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_1044c6a92ea7c6b3579fc70b284c1939" parent="aspace_3ff324cff07e2dc05ab520c7d3367e33" type="folder">23</container>
+            </did>
+          </c03>
+          <c03 id="aspace_66457683f713a8bb3b7d3e9358048e4a" level="item">
+            <did>
+              <unittitle>Letters from Robert Jocelyn, Earl of Roden, and John Dalrymple, sixth Earl of Stair</unittitle>
+              <unitdate datechar="creation" normal="1805-09-25/1805-11-01" type="inclusive">1805 September 25–1805 November 1</unitdate>
+              <container altrender="archive legal" id="aspace_91106403e1b1d7d17777da209dbc8d24" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_62b3ee529fac1c047dbfe50d95114fe9" parent="aspace_91106403e1b1d7d17777da209dbc8d24" type="folder">24</container>
+            </did>
+          </c03>
+          <c03 id="aspace_be030b8b9c48978504042d6b38931dae" level="item">
+            <did>
+              <unittitle>Letter from Sir Robert Liston</unittitle>
+              <unitdate datechar="creation" normal="1811-03-06/1811-03-06" type="inclusive">1811 March 6</unitdate>
+              <container altrender="archive legal" id="aspace_f0bf3eb3dae3d0b0e7c652d57fad7b31" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_a987cce38dac3b17ad3329503f73a03c" parent="aspace_f0bf3eb3dae3d0b0e7c652d57fad7b31" type="folder">25</container>
+            </did>
+          </c03>
+          <c03 id="aspace_646fde3b602d676a3f4aff4285226e05" level="item">
+            <did>
+              <unittitle>Letters from Edward Stanley, and family</unittitle>
+              <unitdate datechar="creation" normal="1815/1816" type="inclusive">1815–1816</unitdate>
+              <container altrender="archive legal" id="aspace_65ae3dbe6ac0eaacf270e1ff06ec4fee" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_d05270bcad10ced136d9d7ca595db54c" parent="aspace_65ae3dbe6ac0eaacf270e1ff06ec4fee" type="folder">26-27</container>
+            </did>
+          </c03>
+        </c02>
+      </c01>
+      <c01 id="aspace_b626673eb9f650a7f80e36c6fc055d3c" level="series">
+        <did>
+          <unittitle>Personal Papers</unittitle>
+          <unitid>2</unitid>
+          <physdesc altrender="whole">
+            <extent altrender="materialtype spaceoccupied">1.25 Linear Feet</extent>
+            <extent altrender="carrier">(3 boxes)</extent>
+          </physdesc>
+          <unitdate datechar="creation" normal="1746/1837" type="inclusive">1746–1837</unitdate>
+        </did>
+        <scopecontent id="aspace_3ffc093529b8d1b6ef4a60bc2a7f2a2d">
+          <head>Scope and Contents</head>
+          <p>Personal Papers consists of records concerning Aust's roles as trustee and executor, personal financial records, and charity subscriptions. Materials include wills and related legal documents, account books, household expenses, subscriptions for newspapers and journals, bills, and receipts. The series also includes personal correspondence, and a small selection of Aust's literary writings.</p>
+        </scopecontent>
+        <arrangement id="aspace_5f381819b7d6846b86c81fa13be3f5ea">
+          <head>Arrangement</head>
+          <p>Arranged by subject, reflecting the order found at time of acquisition.</p>
+        </arrangement>
+        <c02 id="aspace_f08574120930cf24cd14276594d5aeb4" level="file">
+          <did>
+            <unittitle>Estates, trusts, and wills</unittitle>
+          </did>
+          <c03 id="aspace_e667e1eb3d305a8ba5dcc7cf8a73c2a1" level="item">
+            <did>
+              <unittitle>Hammond, Ann Francis</unittitle>
+              <unitdate datechar="creation" normal="1802/1827" type="inclusive">1802–1827</unitdate>
+              <container altrender="archive legal" id="aspace_14a6853e9a9817a9f60f01b8db6ebde3" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_b6ea68744ad4094689b03e5a70530db9" parent="aspace_14a6853e9a9817a9f60f01b8db6ebde3" type="folder">28</container>
+            </did>
+          </c03>
+          <c03 id="aspace_a9894bbd290873f678ae7a2c4aa35d46" level="item">
+            <did>
+              <unittitle>Rolleston, G.W.</unittitle>
+              <unitdate datechar="creation" normal="1802/1826" type="inclusive">1802–1826, undated</unitdate>
+              <container altrender="archive legal" id="aspace_620657faf1bb815337fe2f4894faa62c" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_412a5ecca3586b172aaebe76c250e8a8" parent="aspace_620657faf1bb815337fe2f4894faa62c" type="folder">29</container>
+            </did>
+          </c03>
+          <c03 id="aspace_9cdc996430b1b69a0828ad151a8e6488" level="item">
+            <did>
+              <unittitle>Woodford, Sir Ralph, and family</unittitle>
+              <unitdate datechar="creation" normal="1808/1812" type="inclusive">1808–1812, undated</unitdate>
+              <container altrender="archive legal" id="aspace_ed6d342572421d211123ba5acdd004eb" label="Mixed Materials [39002140838062]" type="Box">2</container>
+              <container id="aspace_db03bd9032e102fa97092094431b4846" parent="aspace_ed6d342572421d211123ba5acdd004eb" type="folder">30-32</container>
+            </did>
+          </c03>
+          <c03 id="aspace_57b92cd57dc58897e96a1c08ac286abd" level="item">
+            <did>
+              <unittitle>Woodford, Sir Ralph, and family</unittitle>
+              <unitdate datechar="creation" normal="1778/1812" type="inclusive">1778–1812</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_6fea292a30efdba0149c8c399729c871" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_09737538b155ed449447e3e206dd7420" parent="aspace_6fea292a30efdba0149c8c399729c871" type="folder">110</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_f04a073e9b835c3c5175fedd3775e5ee" level="file">
+          <did>
+            <unittitle>Personal financial records</unittitle>
+          </did>
+          <c03 id="aspace_d8ea37a7e22cdf6800008d09ab7b8383" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1787/1794" type="inclusive">1787–1794</unitdate>
+              <container altrender="archive legal" id="aspace_00fe729dbff7aabdf7615696f55bcb04" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_107a2f678fa72cafda10041e23869304" parent="aspace_00fe729dbff7aabdf7615696f55bcb04" type="folder">33</container>
+            </did>
+          </c03>
+          <c03 id="aspace_408633a4336b717502074954dac61657" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1793/1802" type="inclusive">1793–1802</unitdate>
+              <container altrender="archive legal" id="aspace_e9bb93ba7188fed940344cea2e82493f" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_651e250974309b9171d74002fd36acf8" parent="aspace_e9bb93ba7188fed940344cea2e82493f" type="folder">34</container>
+            </did>
+          </c03>
+          <c03 id="aspace_d5c7a4d51d740e86cca1740e846d2fee" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1795/1802" type="inclusive">1795–1802</unitdate>
+              <container altrender="archive legal" id="aspace_a76457573038349f41c089b9316c54c0" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_b786595763e6886f8ac95a54e91c64fd" parent="aspace_a76457573038349f41c089b9316c54c0" type="folder">35</container>
+            </did>
+          </c03>
+          <c03 id="aspace_295b1a62c7ab19397f0d31df35af9043" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1812/1818" type="inclusive">1812–1818</unitdate>
+              <container altrender="archive legal" id="aspace_d69b5a1dd889130493887e3c7a9bb75f" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_209e627fc74c8d855b098c821b08abd1" parent="aspace_d69b5a1dd889130493887e3c7a9bb75f" type="folder">36</container>
+            </did>
+          </c03>
+          <c03 id="aspace_eefa216fefdf68f3e2f2abc76c450d39" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1818/1822" type="inclusive">1818–1822</unitdate>
+              <container altrender="archive legal" id="aspace_7df4125ff02bf25de0a43213889cd7ff" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_ebf1d394e7bbce358cc34552c5719da6" parent="aspace_7df4125ff02bf25de0a43213889cd7ff" type="folder">37</container>
+            </did>
+          </c03>
+          <c03 id="aspace_8247457e7c34d83584755133aedda3ee" level="item">
+            <did>
+              <unittitle>Account with Thomas Hammond</unittitle>
+              <unitdate datechar="creation" normal="1799/1801" type="inclusive">1799–1801</unitdate>
+              <container altrender="archive legal" id="aspace_261fda6b3fd4ee3b22730b863af4c11f" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_71794a5bd2243fcb1c1d3179dace716f" parent="aspace_261fda6b3fd4ee3b22730b863af4c11f" type="folder">38</container>
+            </did>
+          </c03>
+          <c03 id="aspace_d50889ba9bcb6307f9e6b370c5de3244" level="item">
+            <did>
+              <unittitle>Account with Thomas Lockington</unittitle>
+              <unitdate datechar="creation" normal="1801/1804" type="inclusive">1801–1804</unitdate>
+              <container altrender="archive legal" id="aspace_fa32e4af4d024b8870b872451a8d4059" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_f90dcb02439ef834073a4d9855b1f379" parent="aspace_fa32e4af4d024b8870b872451a8d4059" type="folder">39</container>
+            </did>
+          </c03>
+          <c03 id="aspace_019a15ca5cee5fddc21362a9a44411ec" level="item">
+            <did>
+              <unittitle>Business with Thrupp and Son</unittitle>
+              <unitdate datechar="creation" normal="1812/1817" type="inclusive">1812–1817, undated</unitdate>
+              <container altrender="archive legal" id="aspace_17b59d48984ecb3ee2286ba150f9c583" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_cb39a939b102ec5c67a38e781203e927" parent="aspace_17b59d48984ecb3ee2286ba150f9c583" type="folder">40</container>
+            </did>
+          </c03>
+          <c03 id="aspace_01ec7b99a32f55725751a8b45017dd75" level="item">
+            <did>
+              <unittitle>Business with Thrupp and Son</unittitle>
+              <unitdate datechar="creation" normal="1811/1819" type="inclusive">1811–1819</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_ef879a3b78ed08ba30644d3b26a1d675" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_460f7a13db2600b9c40994f67c0cc533" parent="aspace_ef879a3b78ed08ba30644d3b26a1d675" type="folder">111</container>
+            </did>
+          </c03>
+          <c03 id="aspace_1f86c05762cc14c43f112470417b6473" level="item">
+            <did>
+              <unittitle>Debt booklet, "W. Fraser"</unittitle>
+              <unitdate datechar="creation" normal="1789/1789" type="inclusive">1789</unitdate>
+              <container altrender="archive legal" id="aspace_963af8638b915eca0c1512e28503baa6" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_2af2a2c1313932931edaec313d87a5fc" parent="aspace_963af8638b915eca0c1512e28503baa6" type="folder">41</container>
+            </did>
+          </c03>
+          <c03 id="aspace_33097d23906637606fae229fe39caa5f" level="item">
+            <did>
+              <unittitle>Finance booklet</unittitle>
+              <unitdate datechar="creation" normal="1815/1815" type="inclusive">1815</unitdate>
+              <container altrender="archive legal" id="aspace_ff990945a46906ebf4a7ed8fec5ad453" label="Mixed Materials [39002140838070]" type="Box">3</container>
+              <container id="aspace_265b0bbe8f14f1ba959eacba381781d8" parent="aspace_ff990945a46906ebf4a7ed8fec5ad453" type="folder">42</container>
+            </did>
+          </c03>
+          <c03 id="aspace_7ba16278b1faccf45fffac8f17bbc77f" level="item">
+            <did>
+              <unittitle>Mortgage with Cooper Crawford</unittitle>
+              <unitdate datechar="creation" type="inclusive">undated</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_62c39cebfbdda0a6da468e2093631276" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_c904971f94196c9cd8d75acc19198641" parent="aspace_62c39cebfbdda0a6da468e2093631276" type="folder">112</container>
+            </did>
+          </c03>
+          <c03 id="aspace_147daa011854e3502aef7649012af93d" level="item">
+            <did>
+              <unittitle>Newspaper account book</unittitle>
+              <unitdate datechar="creation" normal="1765/1774" type="inclusive">1765–1774</unitdate>
+              <container altrender="archive legal" id="aspace_f6853a368569e032ba856b4240d98675" label="Mixed Materials [39002140838088]" type="Box">4</container>
+              <container id="aspace_48e3dda074549b9734c84e8af1c1b00b" parent="aspace_f6853a368569e032ba856b4240d98675" type="folder">43</container>
+            </did>
+          </c03>
+          <c03 id="aspace_0151a7b8ce093184330411fc4930c6fb" level="item">
+            <did>
+              <unittitle>Receipts</unittitle>
+              <unitdate datechar="creation" type="inclusive">1814–1827, undated</unitdate>
+              <container altrender="archive legal" id="aspace_c8ca1aba64646d1d576583443b8931b5" label="Mixed Materials [39002140838088]" type="Box">4</container>
+              <container id="aspace_d2768d9550f200a9e84bbad1bc019ed0" parent="aspace_c8ca1aba64646d1d576583443b8931b5" type="folder">44</container>
+            </did>
+          </c03>
+          <c03 id="aspace_b9b0756e736f29492440c134d1b847e1" level="item">
+            <did>
+              <unittitle>Unsorted accounting</unittitle>
+              <unitdate datechar="creation" type="inclusive">1785–1824, undated</unitdate>
+              <container altrender="archive legal" id="aspace_8ede2c5e7c1d6979a09e226027d46423" label="Mixed Materials [39002140838088]" type="Box">4</container>
+              <container id="aspace_0d47f0672ce8b8bcc627dc4ff76a6746" parent="aspace_8ede2c5e7c1d6979a09e226027d46423" type="folder">45-46</container>
+            </did>
+          </c03>
+          <c03 id="aspace_5b10f8a2eb5ce15153c921c97a7de932" level="item">
+            <did>
+              <unittitle>Unsorted correspondence, bills, and receipts</unittitle>
+              <unitdate datechar="creation" normal="1746/1837" type="inclusive">1746–1837, undated</unitdate>
+              <container altrender="archive legal" id="aspace_643689414d44243fb15dd1524bcf1a37" label="Mixed Materials [39002140838088]" type="Box">4</container>
+              <container id="aspace_e2b906fd8c35f90535452538da3f347a" parent="aspace_643689414d44243fb15dd1524bcf1a37" type="folder">47-52</container>
+            </did>
+          </c03>
+          <c03 id="aspace_96a5d41b9f90eadab59c7c79afc4dde0" level="item">
+            <did>
+              <unittitle>Unsorted correspondence, bills, and receipts</unittitle>
+              <unitdate datechar="creation" normal="1775/1837" type="inclusive">1775–1815, 1837</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_6b016f0eaa2eb860bc043c6525c1ce99" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_46a097136f5bdccd8711987ecab7c426" parent="aspace_6b016f0eaa2eb860bc043c6525c1ce99" type="folder">113</container>
+            </did>
+          </c03>
+          <c03 id="aspace_5d586b31a95ad1e6dca25ccf44aa9e83" level="item">
+            <did>
+              <unittitle>Unsorted correspondence, bills, and receipts, vellum</unittitle>
+              <unitdate datechar="creation" normal="1808/1808" type="inclusive">1808</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_691bbce0dd2392bceb84ff24178765c3" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_9f51e74469c8d526e00d0a68d0e0ae0f" parent="aspace_691bbce0dd2392bceb84ff24178765c3" type="folder">114</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_1ae7f674777f4f97b6c7c231eb859d65" level="file">
+          <did>
+            <unittitle>Charities</unittitle>
+            <unitdate datechar="creation" normal="1801/1827" type="inclusive">1801–1827</unitdate>
+            <container altrender="archive legal" id="aspace_9d02512d2cb1e24728c8b6324de495f1" label="Mixed Materials [39002140838088]" type="Box">4</container>
+            <container id="aspace_0b3445a1a26b9f73a295ea9b18366f98" parent="aspace_9d02512d2cb1e24728c8b6324de495f1" type="folder">53</container>
+          </did>
+        </c02>
+        <c02 id="aspace_7499035d5a1422e07948730aabef08f3" level="file">
+          <did>
+            <unittitle>Charities</unittitle>
+            <unitdate datechar="creation" normal="1801/1827" type="inclusive">1801–1827</unitdate>
+            <container altrender="archive legal" id="aspace_cb11fefd92131525655c9a089eea8248" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_10ac295b06f73fed2fa2d4dc1f71df7d" parent="aspace_cb11fefd92131525655c9a089eea8248" type="folder">54-55</container>
+          </did>
+        </c02>
+        <c02 id="aspace_429a53d81233798d6bff429496bb328a" level="file">
+          <did>
+            <unittitle>Letters from Robertson, William Philip Colyear</unittitle>
+            <unitdate datechar="creation" normal="1806/1816" type="inclusive">1806–1816</unitdate>
+            <container altrender="archive legal" id="aspace_ac4fd08c96be56f4e8b7e81653c69aaf" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_07c4104ce97c5b4aa2f6e8570bab3482" parent="aspace_ac4fd08c96be56f4e8b7e81653c69aaf" type="folder">56-57</container>
+          </did>
+        </c02>
+        <c02 id="aspace_b2de7fe4ce3b3a46bc7ebf78ced51ce7" level="file">
+          <did>
+            <unittitle>Letter from Brooke, Samuel</unittitle>
+            <unitdate datechar="creation" normal="1824-12-09/1824-12-09" type="inclusive">1824 December 9</unitdate>
+            <container altrender="archive legal" id="aspace_d8e14e2677070342565ffd630e82e225" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_6e9df4834f5be83cfa5ce5bcfbf90eaa" parent="aspace_d8e14e2677070342565ffd630e82e225" type="folder">58</container>
+          </did>
+        </c02>
+        <c02 id="aspace_ab82e3b1e5a525ffc862125f6a29a3c6" level="file">
+          <did>
+            <unittitle>Letter from "Miss Dee" on behalf of Maria, Duchess of Gloucester</unittitle>
+            <unitdate datechar="creation" normal="1807-07-08/1807-07-08" type="inclusive">1807 July 8</unitdate>
+            <container altrender="archive legal" id="aspace_d2f6f1347d1134e7034f27b1cc05051d" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_7d8ac2c6708c4324db47642694b8dc00" parent="aspace_d2f6f1347d1134e7034f27b1cc05051d" type="folder">59</container>
+          </did>
+        </c02>
+        <c02 id="aspace_abd7832d96f94cf88d827adbbc83aa5f" level="file">
+          <did>
+            <unittitle>Prospectus by Butler, Reverend Weedon</unittitle>
+            <unitdate datechar="creation" type="inclusive">circa 1790</unitdate>
+            <container altrender="archive legal" id="aspace_a8b1dbd40236d73f2a69159b9d5af912" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_e5e25eecd09dcdcef49005460c5e576d" parent="aspace_a8b1dbd40236d73f2a69159b9d5af912" type="folder">60</container>
+          </did>
+        </c02>
+        <c02 id="aspace_f47c794b41c7904a409c08759f6390cf" level="file">
+          <did>
+            <unittitle>Lists of visitors to Staffa and Iona</unittitle>
+            <unitdate datechar="creation" type="inclusive">circa 1808</unitdate>
+            <container altrender="archive legal" id="aspace_30ae4ffc7a5d7cba42e38289994aec3b" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_dc674903f8938b7715ece98f3595dd95" parent="aspace_30ae4ffc7a5d7cba42e38289994aec3b" type="folder">61</container>
+          </did>
+        </c02>
+        <c02 id="aspace_76da2818209b030d0b1e6869bc26a8f9" level="file">
+          <did>
+            <unittitle>Autograph manuscript verses for the birthday of Francis Osborne, fifth Duke of Leeds</unittitle>
+            <unitdate datechar="creation" type="inclusive">circa 1797</unitdate>
+            <container altrender="archive legal" id="aspace_15c8e2d0a4cdec16f1b6a637e04a45de" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_baa8479933325d9ee3b73554dc66b4a2" parent="aspace_15c8e2d0a4cdec16f1b6a637e04a45de" type="folder">62</container>
+          </did>
+        </c02>
+        <c02 id="aspace_bf65d78c8aca78a879342a32da28f2fc" level="file">
+          <did>
+            <unittitle>Schedule to two houses, no. 7 and 8, Paradise Row, Chelsea</unittitle>
+            <unitdate datechar="creation" normal="1805-03-15/1805-03-15" type="inclusive">1805 March 15</unitdate>
+            <container altrender="archive legal" id="aspace_f8879536b8382f750da3c269097f7286" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_346af01b4bb8f137a2e8de663b0d0385" parent="aspace_f8879536b8382f750da3c269097f7286" type="folder">63</container>
+          </did>
+        </c02>
+        <c02 id="aspace_96b7f33a46f977b3799f10c9181d18a0" level="file">
+          <did>
+            <unittitle>Unsorted personal correspondence</unittitle>
+            <unitdate datechar="creation" normal="1796/1827" type="inclusive">1796–1827, undated</unitdate>
+            <container altrender="archive legal" id="aspace_82f6d9d539fc87361ad4a524df9f1c51" label="Mixed Materials [39002140838096]" type="Box">5</container>
+            <container id="aspace_1a1fc9823a1668469a59c3540500c7f8" parent="aspace_82f6d9d539fc87361ad4a524df9f1c51" type="folder">64-65a</container>
+          </did>
+        </c02>
+      </c01>
+      <c01 id="aspace_a008f5c1abc8541b29df1277dc1ad984" level="series">
+        <did>
+          <unittitle>Correspondence and Other Papers</unittitle>
+          <unitid>3</unitid>
+          <physdesc altrender="whole">
+            <extent altrender="materialtype spaceoccupied">3.75 Linear Feet</extent>
+            <extent altrender="carrier">(4 boxes)</extent>
+          </physdesc>
+          <unitdate datechar="creation" normal="1762/1815" type="inclusive">1762–1815</unitdate>
+        </did>
+        <scopecontent id="aspace_d773bae75829e12b7c06246771a65a89">
+          <head>Scope and Contents</head>
+          <p>This series contains correspondence and personal and professional papers of Sarah Murray Aust, George Aust's second wife, and others. Most of the correspondence is addressed to George Aust. Sarah Aust's papers consist of personal letters, financial records, legal records concerning her first husband William Murray, as well as drafts, publishing correspondence, and accounts with printers and booksellers related to her travel writing.</p>
+          <p> The series also contains letters from diplomat John Osborn, and a related collection of "Osborniana," including letters to Aust from Osborn's brother, Sir George Osborn, and Osborn's wills and estate documents. Additional correspondents are philanthropist and literary editor Thomas Bowdler; writers William Augustus Miles and Bishop Thomas Percy; philanthropist Lady Barbara Montagu; novelist Sarah Scott; and statesman Philip Yorke, second Earl of Hardwicke.</p>
+        </scopecontent>
+        <arrangement id="aspace_5171aa2a9ac88329f4607def32e06d96">
+          <head>Arrangement</head>
+          <p>Arranged alphabetically by last name.</p>
+        </arrangement>
+        <c02 id="aspace_765e8139905396d1f93f4b4674e1c71f" level="file">
+          <did>
+            <unittitle>Aust, Sarah Murray</unittitle>
+          </did>
+          <c03 id="aspace_b1258239a8ae1e25db4c860148876930" level="item">
+            <did>
+              <unittitle>General papers</unittitle>
+              <unitdate datechar="creation" normal="1799/1812" type="inclusive">1799–1812, undated</unitdate>
+              <container altrender="archive legal" id="aspace_a13895c4318cf51d03b0aa481d2bf557" label="Mixed Materials [39002140838096]" type="Box">5</container>
+              <container id="aspace_a40e26071b954bbd3063c4c004c48888" parent="aspace_a13895c4318cf51d03b0aa481d2bf557" type="folder">66-68</container>
+            </did>
+          </c03>
+          <c03 id="aspace_8180fd5c8c25765bd1b50c96f1ae96b9" level="item">
+            <did>
+              <unittitle>General papers</unittitle>
+              <unitdate datechar="creation" normal="1811/1812" type="inclusive">1811–1812, undated</unitdate>
+              <container altrender="flat box (17d 1h 21w)" id="aspace_e5f109dc893093745819fbf99b28c3cf" label="Mixed Materials [39002140838138]" type="Box">9 (Oversize)</container>
+              <container id="aspace_2c263cbf6a193b7c07dd15a16fdb6951" parent="aspace_e5f109dc893093745819fbf99b28c3cf" type="folder">115</container>
+            </did>
+          </c03>
+          <c03 id="aspace_633fa67ec335a02d9df691d561c0efa4" level="item">
+            <did>
+              <unittitle>Account book, executorship of William Murray's estate</unittitle>
+              <unitdate datechar="creation" normal="1786/1811" type="inclusive">1786–1811</unitdate>
+              <container altrender="archive legal" id="aspace_a69f7426e291db721e9b75772c85cd9d" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_967f8eb93c6d1f92ee03985ac33ea8e9" parent="aspace_a69f7426e291db721e9b75772c85cd9d" type="folder">69</container>
+            </did>
+          </c03>
+          <c03 id="aspace_f0fcd9d1b4235de8154b59d6cf455591" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1804/1811" type="inclusive">1804–1811</unitdate>
+              <container altrender="archive legal" id="aspace_445bf95316319d94f749c277ce61688f" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_e80050efadc071e9ccdac71ea7fe5525" parent="aspace_445bf95316319d94f749c277ce61688f" type="folder">70</container>
+            </did>
+          </c03>
+          <c03 id="aspace_011756987bd3c8d8ffdfaa49b64ff5f9" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1809/1809" type="inclusive">1809</unitdate>
+              <container altrender="archive legal" id="aspace_3460ab9b09e1dcfd5aafb401dccd1373" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_6e9b73eda275ce2ad318689608421852" parent="aspace_3460ab9b09e1dcfd5aafb401dccd1373" type="folder">71</container>
+            </did>
+          </c03>
+          <c03 id="aspace_5883a89543b1689bfaf9f0e1a35f7d9b" level="item">
+            <did>
+              <unittitle>Account book</unittitle>
+              <unitdate datechar="creation" normal="1810/1810" type="inclusive">1810</unitdate>
+              <container altrender="archive legal" id="aspace_dffeb26f418d54d8fb43aba115d45f27" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_7314d0caadaca8885a3db9171c67edad" parent="aspace_dffeb26f418d54d8fb43aba115d45f27" type="folder">72</container>
+            </did>
+          </c03>
+          <c03 id="aspace_bdd7b00cf756c5e51e00830f91a36e79" level="item">
+            <did>
+              <unittitle>Notes on minerals, autograph manuscript</unittitle>
+              <unitdate datechar="creation" type="inclusive">undated</unitdate>
+              <container altrender="archive legal" id="aspace_1e80af7330e9c1bd8f02f23b0f36bd2c" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_a5adeb122343e38d9f33b5fe6e74c801" parent="aspace_1e80af7330e9c1bd8f02f23b0f36bd2c" type="folder">73</container>
+            </did>
+          </c03>
+          <c03 id="aspace_1b83784878fe6f5a96ffc02df8fb6a82" level="item">
+            <did>
+              <unittitle>Probate of the Will of the Honorable William Murray</unittitle>
+              <unitdate datechar="creation" normal="1787/1787" type="inclusive">1787</unitdate>
+              <container altrender="flat box (24d 1h 30w)" id="aspace_c3a27e7314cc1bb027d320a8253c8641" label="Mixed Materials [39002140838146]" type="Box">10 (Oversize)</container>
+              <container id="aspace_3a0877a7a36adc976d52caeb72891dfc" parent="aspace_c3a27e7314cc1bb027d320a8253c8641" type="folder">116</container>
+            </did>
+          </c03>
+          <c03 id="aspace_9e5b2b5ecf0196da74888aabcc010db6" level="item">
+            <did>
+              <unittitle>Release of sums appointed by the will of the late Mrs. Aust</unittitle>
+              <unitdate datechar="creation" normal="1812-01-29/1812-01-29" type="inclusive">1812 January 29</unitdate>
+              <container altrender="flat box (24d 1h 30w)" id="aspace_52530fea4dd61c49a53c0fe3c5effbe5" label="Mixed Materials [39002140838146]" type="Box">10 (Oversize)</container>
+              <container id="aspace_942b36f80b06e7550f8a2ed1f225078e" parent="aspace_52530fea4dd61c49a53c0fe3c5effbe5" type="folder">117</container>
+            </did>
+          </c03>
+          <c03 id="aspace_3e0663aabb48d5f21a197f409978ce25" level="item">
+            <did>
+              <unittitle>"A short descriptive arrangement of Gems, stones and spars, Earths metals and semi metals," autograph manuscript</unittitle>
+              <unitdate datechar="creation" type="inclusive">undated</unitdate>
+              <container altrender="archive legal" id="aspace_4b91508600adca993d707f1955c6f615" label="Mixed Materials [39002140838104]" type="Box">6</container>
+              <container id="aspace_f13ad41a531e70201c3e20691892d0bd" parent="aspace_4b91508600adca993d707f1955c6f615" type="folder">74</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_9e1b3692409d5b78f934dacb3e3c98d2" level="file">
+          <did>
+            <unittitle>Bowdler, Thomas</unittitle>
+            <unitdate datechar="creation" normal="1810/1811" type="inclusive">1810–1811</unitdate>
+            <container altrender="archive legal" id="aspace_d30c7dbee34faf6bfd5518965281cac5" label="Mixed Materials [39002140838104]" type="Box">6</container>
+            <container id="aspace_0b28b206f3a9dc4d957789a5613e12b0" parent="aspace_d30c7dbee34faf6bfd5518965281cac5" type="folder">75</container>
+          </did>
+        </c02>
+        <c02 id="aspace_4b51ff4bad05a71dc92ec718c21054d7" level="file">
+          <did>
+            <unittitle>Miles, William Augustus</unittitle>
+            <unitdate datechar="creation" normal="1776/1808" type="inclusive">1776–1808</unitdate>
+            <container altrender="archive legal" id="aspace_4a176353df815b3c9508f0921a6656ba" label="Mixed Materials [39002140838112]" type="Box">7</container>
+            <container id="aspace_c10b32e6c75133ccea6b601948750eb1" parent="aspace_4a176353df815b3c9508f0921a6656ba" type="folder">76-77</container>
+          </did>
+        </c02>
+        <c02 id="aspace_a838c002a5718b846bf36055b1afe282" level="file">
+          <did>
+            <unittitle>Montagu, Lady Barbara</unittitle>
+            <unitdate datechar="creation" type="inclusive">1762, 1764</unitdate>
+            <container altrender="archive legal" id="aspace_d01fa22f887579c933dfe495ba3250a4" label="Mixed Materials [39002140838112]" type="Box">7</container>
+            <container id="aspace_3121700d17e9826164ff7a6b2d395605" parent="aspace_d01fa22f887579c933dfe495ba3250a4" type="folder">78</container>
+          </did>
+        </c02>
+        <c02 id="aspace_a0b2df967e3161930297fe661da77c5d" level="file">
+          <did>
+            <unittitle>Osborn, John</unittitle>
+            <unitdate datechar="creation" normal="1799/1814" type="inclusive">1799–1814</unitdate>
+            <container altrender="archive legal" id="aspace_9ab36206c2bb794d835c5ee9d820908d" label="Mixed Materials [39002140838112]" type="Box">7</container>
+            <container id="aspace_e42857fe85aa261dcc99576e206c2e56" parent="aspace_9ab36206c2bb794d835c5ee9d820908d" type="folder">79-82</container>
+          </did>
+        </c02>
+        <c02 id="aspace_6ff24f618d4634b9516ac5348f7260db" level="file">
+          <did>
+            <unittitle>Osborniana</unittitle>
+          </did>
+          <c03 id="aspace_7fd655f7c638e1275a5f488a4ce33b21" level="item">
+            <did>
+              <unittitle>Letters from Sir George Osborn, and Count Semyon Vorontsov [Woronzow], regarding the prisoner-of-war affair</unittitle>
+              <unitdate datechar="creation" normal="1803/1803" type="inclusive">1803</unitdate>
+              <container altrender="archive legal" id="aspace_256a7618e3f7854df9da0376f02e5028" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_1461372c3a22cf82fd5f40b27cea874b" parent="aspace_256a7618e3f7854df9da0376f02e5028" type="folder">83</container>
+            </did>
+          </c03>
+          <c03 id="aspace_beeac64899c1bf3c2c8d1dab2016405d" level="item">
+            <did>
+              <unittitle>Letters from Sir George Osborn, regarding message from John Osborn relating to Catherine the Great</unittitle>
+              <unitdate datechar="creation" normal="1809-07/1809-07" type="inclusive">1809 July</unitdate>
+              <container altrender="archive legal" id="aspace_c57005b57b836f1ba4dadb13614ab696" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_dc54812182fb2e86b9c7ede6da7c7c7e" parent="aspace_c57005b57b836f1ba4dadb13614ab696" type="folder">84</container>
+            </did>
+          </c03>
+          <c03 id="aspace_2eaa5f1b31e5b5913a0954488437e854" level="item">
+            <did>
+              <unittitle>Letters from John Miliquet</unittitle>
+              <unitdate datechar="creation" normal="1807/1809" type="inclusive">1807–1809</unitdate>
+              <container altrender="archive legal" id="aspace_ebabb0015a5d9230bed47c9c369675c3" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_5e4064c166f2c7ed96cdef2716ce65bf" parent="aspace_ebabb0015a5d9230bed47c9c369675c3" type="folder">85</container>
+            </did>
+          </c03>
+          <c03 id="aspace_f66414606dc80a5ee68d28369dc824a0" level="item">
+            <did>
+              <unittitle>Letters from Heneage Osborn, Thomas Metcalfe, and Mr. Luntly, financial agent, regarding Luntly's frauds</unittitle>
+              <unitdate datechar="creation" normal="1810/1811" type="inclusive">1810–1811</unitdate>
+              <container altrender="archive legal" id="aspace_9ed281c2f557ab5c752200d7ad862666" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_de7c7eafdf18b26afcb7182afc3d7baf" parent="aspace_9ed281c2f557ab5c752200d7ad862666" type="folder">86-87</container>
+            </did>
+          </c03>
+          <c03 id="aspace_abf82e0a36c2f1a8fa765a1bdecb14c4" level="item">
+            <did>
+              <unittitle>Letters from Sir George Osborn and other correspondents, regarding Patent Customers at Custom House, Cardiff</unittitle>
+              <unitdate datechar="creation" normal="1812/1813" type="inclusive">1812–1813</unitdate>
+              <container altrender="archive legal" id="aspace_907db044b2633ab28959bbe0e81f609e" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_5cd5c21d9088aaba8fdedc4face05fb6" parent="aspace_907db044b2633ab28959bbe0e81f609e" type="folder">88-90</container>
+            </did>
+          </c03>
+          <c03 id="aspace_cd9f2dcc018dc00a64e665ca3122da41" level="item">
+            <did>
+              <unittitle>Draft will, Additional Codicils, and Minutes of the Will and Codicils of John Osborn Esquire</unittitle>
+              <unitdate datechar="creation" normal="1810/1814" type="inclusive">1810–1814</unitdate>
+              <container altrender="archive legal" id="aspace_6cb06b84add360db3bcc5ba033a51fbb" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_75f0b273d08987e626488730c2c3573b" parent="aspace_6cb06b84add360db3bcc5ba033a51fbb" type="folder">91</container>
+            </did>
+          </c03>
+          <c03 id="aspace_024d49ca279bdaccf1c52a1a53a14d1f" level="item">
+            <did>
+              <unittitle>Executorship of estate</unittitle>
+              <unitdate datechar="creation" normal="1814/1815" type="inclusive">1814–1815</unitdate>
+              <container altrender="archive legal" id="aspace_b76fd602f004a8990fd18d75a73529c7" label="Mixed Materials [39002140838112]" type="Box">7</container>
+              <container id="aspace_9bed334b30a1aec4d3ebf1d81a415489" parent="aspace_b76fd602f004a8990fd18d75a73529c7" type="folder">92</container>
+            </did>
+          </c03>
+          <c03 id="aspace_1d2034ed6c3c798ae232ac522fdbd5c3" level="item">
+            <did>
+              <unittitle>Unsorted correspondence and documents</unittitle>
+              <unitdate datechar="creation" normal="1802/1815" type="inclusive">1802–1815, undated</unitdate>
+              <container altrender="archive legal" id="aspace_20609a428d8059b495b7918eaf1b8038" label="Mixed Materials [39002140838120]" type="Box">8</container>
+              <container id="aspace_3c30c686195679c5c894fd050f0cb197" parent="aspace_20609a428d8059b495b7918eaf1b8038" type="folder">93-94</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_e72219bc492adb1d082f1b2bc2dc179f" level="file">
+          <did>
+            <unittitle>Percy, Bishop Thomas</unittitle>
+          </did>
+          <c03 id="aspace_218a3fdeaed680cd890e35b5bb2a2ceb" level="item">
+            <did>
+              <unittitle>Autograph letters, signed (#1–9)</unittitle>
+              <unitdate datechar="creation" normal="1800/1804" type="inclusive">1800–1804</unitdate>
+              <container altrender="archive legal" id="aspace_9f39edd1d34f8331b4a2a9bde99afc3e" label="Mixed Materials [39002140838120]" type="Box">8</container>
+              <container id="aspace_5d809fbffdc2ee44eb922f85aa833960" parent="aspace_9f39edd1d34f8331b4a2a9bde99afc3e" type="folder">95</container>
+            </did>
+          </c03>
+          <c03 id="aspace_aac3d2eecdcf5482dcc3ea2948c9b40a" level="item">
+            <did>
+              <unittitle>Dictated letters, signed (#10–31)</unittitle>
+              <unitdate datechar="creation" normal="1804/1811" type="inclusive">1804–1811</unitdate>
+              <container altrender="archive legal" id="aspace_e93aa5617ddd5be639c5654fcbbfdfcb" label="Mixed Materials [39002140838120]" type="Box">8</container>
+              <container id="aspace_20a66f3399f7c94b20cfe9cb36b07888" parent="aspace_e93aa5617ddd5be639c5654fcbbfdfcb" type="folder">96-98</container>
+            </did>
+          </c03>
+          <c03 id="aspace_114a6f2792032b42b023b863730c30cc" level="item">
+            <did>
+              <unittitle>Insertions and associated material (#32–44)</unittitle>
+              <unitdate datechar="creation" normal="1801/1811" type="inclusive">1801–1811, undated</unitdate>
+              <container altrender="archive legal" id="aspace_6f22cb51fbfe22b47907cc48e9daa487" label="Mixed Materials [39002140838120]" type="Box">8</container>
+              <container id="aspace_a8f50295ce191d0a1e6ac0fa468aef63" parent="aspace_6f22cb51fbfe22b47907cc48e9daa487" type="folder">99-100</container>
+            </did>
+          </c03>
+        </c02>
+        <c02 id="aspace_d49748998aff4b2ec0ab3f25efcaa8e0" level="file">
+          <did>
+            <unittitle>Scott, Sarah</unittitle>
+            <unitdate datechar="creation" type="inclusive">circa 1760s–1790s</unitdate>
+            <container altrender="archive legal" id="aspace_5b2b80c81c960ac290632917578fc4eb" label="Mixed Materials [39002140838120]" type="Box">8</container>
+            <container id="aspace_68157ec23141c0df73480fad5853b8cf" parent="aspace_5b2b80c81c960ac290632917578fc4eb" type="folder">101-104</container>
+          </did>
+        </c02>
+        <c02 id="aspace_37f12f32d8987867a1a44a1c9b12dc15" level="file">
+          <did>
+            <unittitle>Yorke, Philip, second Earl of Hardwicke</unittitle>
+            <unitdate datechar="creation" normal="1778/1787" type="inclusive">1778–1787</unitdate>
+            <container altrender="archive legal" id="aspace_4a053012473ac69da3220d88555d3cf5" label="Mixed Materials [39002140838120]" type="Box">8</container>
+            <container id="aspace_4647b2f4fd60535c9a71e630f570c2f2" parent="aspace_4a053012473ac69da3220d88555d3cf5" type="folder">105</container>
+          </did>
+        </c02>
+      </c01>
+      <c01 id="aspace_ee32bba825aecb277bf7bd62d0fbed43" level="series">
+        <did>
+          <unittitle>Collection Inventories</unittitle>
+          <unitid>4</unitid>
+          <unitdate datechar="creation" type="inclusive">undated</unitdate>
+        </did>
+        <scopecontent id="aspace_ed5e4c334b9660f22c36bbe397d47996">
+          <head>Scope and Contents</head>
+          <p>Two inventories prepared for the Beinecke Rare Book and Manuscript Library contain detailed descriptions of the collection's materials, providing historical context and biographical information about Aust and his correspondents.</p>
+        </scopecontent>
+        <c02 id="aspace_51eed34d0a7af6cd15165bf118da91fd" level="file">
+          <did>
+            <unittitle>Inventories</unittitle>
+            <unitdate datechar="creation" type="inclusive">undated</unitdate>
+            <container altrender="archive legal" id="aspace_05835a5a357a958c7a44ff3db1f0e852" label="Mixed Materials [39002140838120]" type="Box">8</container>
+            <container id="aspace_5c3cb552366310cd99e80a3461ba97bd" parent="aspace_05835a5a357a958c7a44ff3db1f0e852" type="folder">106</container>
+          </did>
+        </c02>
+      </c01>
+    </dsc>
+  </archdesc>
+</ead>

@@ -1,0 +1,85 @@
+2024-05-29 07:41:11,366 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 07:41:11,367 - INFO - Total XML files found in working directory: 0
+2024-05-29 07:41:11,367 - INFO - Total EAD files after filtering: 0
+2024-05-29 07:41:11,367 - INFO - No EAD files found after filtering.
+2024-05-29 07:42:00,932 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 07:42:00,938 - INFO - Total XML files found in working directory: 0
+2024-05-29 07:42:00,938 - INFO - Total EAD files after filtering: 0
+2024-05-29 07:42:00,938 - INFO - No EAD files found after filtering.
+2024-05-29 07:42:38,202 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 07:42:38,203 - INFO - Total XML files found in working directory: 0
+2024-05-29 07:42:38,203 - INFO - Total EAD files after filtering: 0
+2024-05-29 07:42:38,204 - INFO - No EAD files found after filtering.
+2024-05-29 07:44:18,746 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 07:44:18,747 - INFO - Total XML files found in working directory: 0
+2024-05-29 07:44:18,747 - INFO - Total EAD files after filtering: 0
+2024-05-29 07:44:18,747 - INFO - No EAD files found after filtering.
+2024-05-29 15:23:42,675 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 15:23:42,677 - INFO - Total XML files found in working directory: 1
+2024-05-29 15:23:42,678 - INFO - Total EAD files after filtering: 1
+2024-05-29 15:23:43,695 - INFO - Preparing dataFrame for Phillip Lopate papers folders
+2024-05-29 15:23:43,722 - INFO - Preparing dataFrame for Phillip Lopate papers boxes
+2024-05-29 15:23:43,861 - INFO - Prepping Excel files for mail merge operation
+2024-05-29 15:23:44,222 - INFO - Master Excel files for folders and boxes are ready.
+2024-05-29 15:23:44,222 - INFO - Total folder count fewer than 1,000; proceeding to label generation menu...
+2024-05-29 15:24:17,382 - INFO - Displaying available series options:
+2024-05-29 15:32:54,950 - INFO - user selects series: 6
+2024-05-29 15:35:05,686 - INFO - User enters: 9
+2024-05-29 22:10:49,569 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-29 22:10:49,579 - INFO - Total XML files found in working directory: 2
+2024-05-29 22:10:49,584 - INFO - Total EAD files after filtering: 2
+2024-05-29 22:11:25,922 - INFO - User selected index: 0
+2024-05-29 22:11:26,038 - INFO - Preparing dataFrame for George Aust papers folders
+2024-05-29 22:11:26,053 - INFO - Preparing dataFrame for George Aust papers boxes
+2024-05-29 22:11:26,071 - INFO - Prepping Excel files for mail merge operation
+2024-05-29 22:11:26,229 - INFO - Master Excel files for folders and boxes are ready.
+2024-05-29 22:11:26,229 - INFO - Total folder count fewer than 1,000; proceeding to label generation menu...
+2024-05-30 10:17:50,037 - INFO - Program finished.
+2024-05-30 11:00:43,402 - INFO - Total recent XML files in Downloads folder: 2
+2024-05-30 11:00:43,405 - INFO - Copied OSB_MSS_270_20240530_142018_UTC__ead.xml to c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator
+2024-05-30 11:00:43,415 - INFO - Copied OSB_MSS_270_20240530_143918_UTC__ead.xml to c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator
+2024-05-30 11:00:43,416 - INFO - Total XML files found in working directory: 4
+2024-05-30 11:00:43,420 - INFO - Total EAD files after filtering: 4
+2024-05-30 11:03:01,456 - INFO - Total recent XML files in Downloads folder: 2
+2024-05-30 11:03:01,461 - INFO - Copied OSB_MSS_270_20240530_142018_UTC__ead.xml to c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator
+2024-05-30 11:03:01,467 - INFO - Copied OSB_MSS_270_20240530_143918_UTC__ead.xml to c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator
+2024-05-30 11:03:01,468 - INFO - Total XML files found in working directory: 4
+2024-05-30 11:03:01,469 - INFO - Total EAD files after filtering: 4
+2024-05-30 11:07:26,633 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-30 11:07:26,633 - INFO - Total XML files found in working directory: 3
+2024-05-30 11:07:26,650 - INFO - Total EAD files after filtering: 3
+2024-05-30 11:07:54,821 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-30 11:07:54,821 - INFO - Total XML files found in working directory: 2
+2024-05-30 11:07:54,821 - INFO - Total EAD files after filtering: 2
+2024-05-30 14:30:43,009 - WARNING - Invalid input encountered.
+
+2024-05-30 14:32:03,628 - INFO - User selected index: 0
+2024-05-30 14:32:03,795 - INFO - Preparing dataFrame for George Aust papers folders
+2024-05-30 14:32:03,812 - INFO - Preparing dataFrame for George Aust papers boxes
+2024-05-30 14:32:03,832 - INFO - Prepping Excel files for mail merge operation
+2024-05-30 14:32:24,370 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-30 14:32:24,371 - INFO - Total XML files found in working directory: 2
+2024-05-30 14:32:24,372 - INFO - Total EAD files after filtering: 2
+2024-05-30 14:32:30,148 - INFO - User selected index: 0
+2024-05-30 14:32:30,241 - INFO - Preparing dataFrame for George Aust papers folders
+2024-05-30 14:32:30,245 - INFO - Preparing dataFrame for George Aust papers boxes
+2024-05-30 14:32:30,259 - INFO - Prepping Excel files for mail merge operation
+2024-05-30 14:32:30,394 - INFO - Master Excel files for folders and boxes are ready.
+2024-05-30 14:32:30,395 - INFO - Total folder count fewer than 1,000; proceeding to label generation menu...
+2024-05-30 14:34:34,332 - INFO - Opening template: c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator\default_folder_template.docm
+2024-05-30 14:34:37,279 - INFO - Saving merged document: c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator\George Aust papers_OSB MSS 270_folder_labels.docx
+2024-05-30 14:34:38,993 - INFO - Mail merge process completed.
+2024-05-30 14:34:39,999 - INFO - Opening template: c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator\box_template_continuous_numbering.docm
+2024-05-30 14:34:41,090 - INFO - Saving merged document: c:\Users\wan7\OneDrive - Yale University\Desktop\Desktop items May 2024\Label_Generator\George Aust papers_OSB MSS 270_box_labels.docx
+2024-05-30 14:34:42,728 - INFO - Mail merge process completed.
+2024-05-30 14:34:42,737 - INFO - Program finished.
+2024-05-31 15:00:08,107 - INFO - Total recent XML files in Downloads folder: 0
+2024-05-31 15:00:08,107 - INFO - Total XML files found in working directory: 2
+2024-05-31 15:00:08,113 - INFO - Total EAD files after filtering: 2
+2024-05-31 15:00:28,002 - INFO - User selected index: 0
+2024-05-31 15:00:28,109 - INFO - Preparing dataFrame for George Aust papers folders
+2024-05-31 15:00:28,120 - INFO - Preparing dataFrame for George Aust papers boxes
+2024-05-31 15:00:28,136 - INFO - Prepping Excel files for mail merge operation
+2024-05-31 15:00:28,293 - INFO - Master Excel files for folders and boxes are ready.
+2024-05-31 15:00:28,294 - INFO - Total folder count fewer than 1,000; proceeding to label generation menu...
+2024-05-31 15:04:33,764 - INFO - Displaying available series options:

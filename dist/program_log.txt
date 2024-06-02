@@ -1,0 +1,23 @@
+2024-04-09 10:17:10,389 - INFO - Total recent XML files in Downloads folder: 1
+2024-04-09 10:17:10,437 - INFO - Copied 5211.xml to C:\Users\wan7\OneDrive - Yale University\Desktop\Label_Generator\dist
+2024-04-09 10:17:10,438 - INFO - Total XML files found in working directory: 2
+2024-04-09 10:17:10,439 - INFO - Total EAD files after filtering: 2
+2024-04-09 10:17:20,907 - INFO - User selected index: 1
+2024-04-09 10:17:28,846 - INFO - Preparing dataFrame for Claude Seaver and Robin W. Winks collection of road maps folders
+2024-04-09 10:17:28,919 - INFO - Preparing dataFrame for Claude Seaver and Robin W. Winks collection of road maps boxes
+2024-04-09 10:17:29,147 - INFO - Prepping Excel files for mail merge operation
+2024-04-09 10:17:30,058 - INFO - Master Excel files for folders and boxes are ready.
+2024-04-09 10:17:30,058 - INFO - Large collection detected with more than 1000 folders.
+2024-04-09 10:17:56,471 - INFO - user selects Box(es): 112, 113
+2024-04-09 10:18:00,529 - INFO - User enters: 1
+2024-04-09 10:18:00,530 - INFO - Option 1 selected: # DEFAULT folder and box labels
+2024-04-09 10:18:01,530 - INFO - Opening template: C:\Users\wan7\AppData\Local\Temp\_MEI479202\default_folder_template.docm
+2024-04-09 10:18:06,200 - INFO - Saving merged document: C:\Users\wan7\OneDrive - Yale University\Desktop\Label_Generator\dist\Claude Seaver and Robin W. Winks collection of road maps_2023T11:27.629_folders_by_box_specified_labels.docx
+2024-04-09 10:18:06,223 - ERROR - An error occurred during mail merge: (-2147352567, 'Exception occurred.', (0, 'Microsoft Word', 'This is not a valid file name.\nTry one or more of the following:\n* Check the path to make sure it was typed correctly.\n* Select a file from the list of files and folders.', 'wdmain11.chm', 24632, -2146823136), None)
+2024-04-09 10:18:06,775 - INFO - Mail merge process completed.
+2024-04-09 10:18:06,776 - INFO - Mail merge for default folder labels completed.
+2024-04-09 10:18:07,784 - INFO - Opening template: C:\Users\wan7\AppData\Local\Temp\_MEI479202\box_template_continuous_numbering.docm
+2024-04-09 10:18:09,672 - INFO - Saving merged document: C:\Users\wan7\OneDrive - Yale University\Desktop\Label_Generator\dist\Claude Seaver and Robin W. Winks collection of road maps_2023T11:27.629_boxes_by_box_specified_labels.docx
+2024-04-09 10:18:09,693 - ERROR - An error occurred during mail merge: (-2147352567, 'Exception occurred.', (0, 'Microsoft Word', 'This is not a valid file name.\nTry one or more of the following:\n* Check the path to make sure it was typed correctly.\n* Select a file from the list of files and folders.', 'wdmain11.chm', 24632, -2146823136), None)
+2024-04-09 10:18:10,392 - INFO - Mail merge process completed.
+2024-04-09 10:18:10,393 - INFO - Mail merge for default box labels completed.
