@@ -1,7 +1,5 @@
-# Last updated: May 29, 2024
+# # Last updated: May 29, 2024
 
-
-# June 7, 2024 Update: Modified for EAD3 support.
 # May 29, 2024 Update: Improved commentaries.
 # March 14, 2024 Update: Modified box selection display to show all boxes so that Ruth can see all boxes and select the ones she wants to print labels for.
 
@@ -25,6 +23,17 @@
 # December update notes:
 # Script description above refined. Will highlight anything missing later
 
+# Note:
+# Roman Numeral Conversion for Series:
+# Converts 'unitid' to Roman numerals if it's 40 or less
+
+# Future Enhancements:
+# Replace hardcoded logic with a Roman numeral module for future scalability
+# Adaptation to EAD3 Standards
+# Extension for MSSA and Other Repositories
+# ASpace Plugin Development for Web Interface
+# Refactoring to Object-Oriented Programming (OOP) Paradigm
+
 
 # IMPORTS AND GLOBAL VARIABLES
 
@@ -43,23 +52,10 @@ import shutil
 
 # XML PARSING AND EAD FILE PROCESSING FUNCTIONS
 
-def set_namespace(root):
-    if 'urn:isbn:1-931666-22-9' in root.nsmap.values():
-        namespaces['ns'] = 'urn:isbn:1-931666-22-9'
-    elif 'http://ead3.archivists.org/schema/' in root.nsmap.values():
-        namespaces['ns'] = 'http://ead3.archivists.org/schema/'
-    else:
-        raise ValueError("Unsupported EAD version.")
-    return namespaces['ns']
-
 def is_ead_file(file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
-            content = file.read(1024)  # Read first 1024 bytes to accommodate headers
-            return '<ead' in content
-    except Exception as e:
-        logging.error(f"Error reading {file_path}: {e}")
-        return False
+    with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
+        first_lines = ''.join(file.readline() for _ in range(10))
+        return '<ead>' in first_lines or '<ead ' in first_lines  # Simple check for EAD root element
 
 def preprocess_ead_file(file_path):
     sanitized_file_path = file_path.replace(".xml", "_sanitized.xml")
@@ -74,7 +70,7 @@ def preprocess_ead_file(file_path):
     else:
         return file_path
 
-def process_ead_files(working_directory):
+def process_ead_files(working_directory, namespaces):
     try:
         move_recent_ead_files(working_directory)
         
@@ -85,76 +81,56 @@ def process_ead_files(working_directory):
         # Sort files by modification time, with most recent first
         xml_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
 
-        # Filter for EAD files using the enhanced is_ead_file
+        # Filter for EAD files
         ead_files = [file for file in xml_files if is_ead_file(file)]
         logging.info(f"Total EAD files after filtering: {len(ead_files)}")
 
     except Exception as e:
         logging.error(f"Error in process_ead_files: {str(e)}")
-        return None
-
-    if not ead_files:
+    
+    if len(ead_files) == 0:
         logging.info("No EAD files found after filtering.")
-        print("\nNo EAD files found in the directory. Please ensure you have EAD files in the directory to process.")
+        print("\nNo EAD files found in the directory.\n")
+        print("If you want to generate labels, please make sure to download EAD file(s) on ArchivesSpace or bring ArchivesSpace EAD file(s) over from somewhere else into this directory.\n")
+        print("Until then...thank you, and goodbye!\n")
         return None
 
     collections = []
     
-    # Process each EAD file to extract necessary data
+    # this part extracts the generic data from EAD that'll go on label/printed to console
     for file_path in ead_files:
         processed_file = preprocess_ead_file(file_path)
         if processed_file is not None:
             try:
                 tree = ET.parse(processed_file)
                 root = tree.getroot()
-                # Dynamically set namespace based on the EAD root element
-                namespace_uri = set_namespace(root)
-                namespaces['ns'] = namespace_uri
-
-                # Debug print to check which namespace is used
-                #print(f"Processing {file_path} using namespace: {namespaces['ns']}")
+                
                 repository_element = root.find('./ns:archdesc/ns:did/ns:repository/ns:corpname', namespaces=namespaces)
-                #print(f"Repository element{repository_element}")
                 collection_name_element = root.find('./ns:archdesc/ns:did/ns:unittitle', namespaces=namespaces)
-                #print(f"Collection name element{collection_name_element}")
                 call_num_element = root.find('./ns:archdesc/ns:did/ns:unitid', namespaces=namespaces)
-                #print(f"Call number element{call_num_element}")
-                finding_aid_author_element = root.find('./ns:eadheader/ns:filedesc/ns:titlestmt/ns:author', namespaces=namespaces)
-                #print(f"Finding aid author element{finding_aid_author_element}")
+                finding_aid_author_element = root.find('./ns:eadheader/ns:filesdesc/ns:titlestmt/ns:author', namespaces=namespaces)
                 
                 repository_name = repository_element.text if repository_element is not None else "Unknown Repository"
-                print(repository_name)
                 collection_name = collection_name_element.text if collection_name_element is not None else "Unknown Collection"
-                #print(collection_name)
                 call_number = call_num_element.text if call_num_element is not None else "Unknown Call Number"
-                #print(call_number)
                 finding_aid_author = finding_aid_author_element.text if finding_aid_author_element is not None else "by Unknown Author"
-                #print(finding_aid_author)
 
-                # Store collection data with additional metadata
-                collections.append({
-                    "path": processed_file, 
-                    "name": collection_name,
-                    "number": call_number, 
-                    "repository": repository_name, 
-                    "author": finding_aid_author,
-                    "ead_version": "ead2002" if namespace_uri == 'urn:isbn:1-931666-22-9' else "ead3", 
-                    "namespaces": namespaces
-                })
+                collections.append({"path": processed_file, "name": collection_name, "number": call_number, "repository": repository_name, "author": finding_aid_author})
 
             except Exception as e:
                 logging.error(f"Error processing file {file_path}: {str(e)}")
                 print(f"Encountered an error with file {file_path}, but continuing with processing.\n")
 
-    # Decision-making based on the number of collections processed
-    if len(collections) == 1: # If only one collection is found, return it directly and proceed with processing that collecition
+    if len(collections) == 1:
         return collections[0]
+
     elif len(collections) > 1:
-        return user_select_collection(collections) # If multiple collections are found, prompt the user to select one
+        return user_select_collection(collections)
+
     else:
         print("No suitable EAD files found for processing.\n")
         return None
-
+    
 def try_parse(input_file):
     """Attempt to parse EAD(.xml) and return boolean result."""
     try:
@@ -210,7 +186,6 @@ def sanitize_xml(input_file_path, output_file_path):
 
 def is_terminal_node(node):
     """Determines if a node is a terminal node by checking its children."""
-    # 06-06-2024: Modified regex to back to original to exclude ns:
     for child in node:
         tag = ET.QName(child.tag).localname
         if re.match(r'c\d{0,2}$|^c$', tag): 
@@ -220,76 +195,29 @@ def is_terminal_node(node):
 
 # DATA EXTRACTION AND MANIPULATION FUNCTIONS
 
-def extract_box_number(did_element, namespaces, ead_version):
-    container_xpath = ".//ns:container"
-    type_attr = 'type' if ead_version == 'ead2002' else 'localtype'
-    all_box_components = did_element.findall(container_xpath, namespaces=namespaces)
+def extract_box_number(did_element, namespaces):
+    """Extracts the box number from the given element."""
+    all_box_components = did_element.findall(".//ns:container", namespaces=namespaces)
     for box_component in all_box_components:
-        if box_component.attrib.get(type_attr, '').lower() == 'box':
-            return box_component.text
+        if box_component.attrib.get('type', '').lower() == 'box':
+            return box_component.text # Beinecke EADs almost always have terminal c components which if has only one container element, that element is of @type 'box'
+    # but what if only one container element but @type 'folder'? 
+    # if not @type box get whatever is in text node if not @type folder
+    # helps catch container elem with direct text like 123 (Art) (e.g. Henri Chopin ead(encoding problem fixed))
     for box_component in all_box_components:
-        if box_component.attrib.get(type_attr, '').lower() != 'folder':
+        if box_component.attrib.get('type', '').lower() != 'folder': 
             return box_component.text
-    #print("No box number found")
     return "10001"  # arbitrary num string flag for unusual/unavailable box number info/num cos mathematically useful than using "Box unavailable"
 
-def extract_folder_date(did_element, namespaces, ead_version):
-    if ead_version == 'ead2002':
-        date_xpath = ".//ns:unitdate"
-        unitdate_element = did_element.find(date_xpath, namespaces=namespaces)
-        if unitdate_element is not None:
-            #print(f"Extracted folder date (EAD2002): {unitdate_element.text}")
-            return unitdate_element.text
-        else:
-            #print("No folder date found (EAD2002)")
-            return "Date unavailable"
-       
-    else:
-        date_xpath = ".//ns:unitdatestructured"
-        unitdatestructured_element = did_element.find(date_xpath, namespaces=namespaces)
-        if unitdatestructured_element is not None:
-            if 'altrender' in unitdatestructured_element.attrib:
-                return unitdatestructured_element.attrib['altrender']
-            else:
-                return "Date unavailable"
-        else: #Adding this because I've seen some EAD3 where either unitdatestructured or unitdate is used but not both (e.g. John Holker) When <unitdate> is used though, it is always expressing "undated" in Holker; I don't know about others.
-            date_xpath = ".//ns:unitdate"
-            unitdate_element = did_element.find(date_xpath, namespaces=namespaces)
-            if unitdate_element is not None:
-                return unitdate_element.text
-            else:
-                return "Date unavailable"
-            
-        
-        '''if date_range_element is not None:
-            from_date = date_range_element.find('ns:fromdate', namespaces=namespaces)
-            to_date = date_range_element.find('ns:todate', namespaces=namespaces)
-            if from_date is not None and to_date is not None:
-                #print(f"Extracted folder date (EAD3): {from_date.text}–{to_date.text}")
-                return f"{from_date.text}–{to_date.text}"
-            else:
-                #print("Incomplete date range found (EAD3)")
-                return "Date unavailable"
-        else:
-            single_date_xpath = ".//ns:unitdatestructured/ns:datesingle"
-            single_date_element = did_element.find(single_date_xpath, namespaces=namespaces)
-            if single_date_element is not None:
-                #print(f"Extracted single folder date (EAD3): {single_date_element.text}")
-                return single_date_element.text
-            else:
-                #print("No folder date found (EAD3)")
-                return "Date unavailable"'''
+def extract_folder_date(did_element, namespaces):
+    """Extracts the folder date from the given element."""
+    unitdate_element = did_element.find(".//ns:unitdate", namespaces=namespaces)
+    return unitdate_element.text if unitdate_element is not None else "Date unavailable" # arbitrary to ensure return type str 
 
 def extract_base_folder_title(did_element, namespaces):
-    unittitle_xpath = ".//ns:unittitle"
-    unittitle_element = did_element.find(unittitle_xpath, namespaces=namespaces)
-    if unittitle_element is not None:
-        base_title = " ".join(unittitle_element.itertext())
-        #print(f"Extracted base folder title: {base_title}")
-        return base_title
-    else:
-        #print("No base folder title found")
-        return "Title unavailable"
+    """Extracts base FOLDER_TITLE from the given element."""
+    unittitle_element = did_element.find(".//ns:unittitle", namespaces=namespaces)
+    return " ".join(unittitle_element.itertext()) if unittitle_element is not None else "Title unavailable" # arbitrary to ensure return type str 
 
 def extract_ancestor_data(node, namespaces):
     """extracts ancestor data from each terminal <c>/<cxx> node"""
@@ -307,7 +235,6 @@ def extract_ancestor_data(node, namespaces):
         ancestor_tag = ET.QName(ancestor.tag).localname
 
         # Match both unnumbered/numbered c tags
-        # 06-06-2024: Modified regex back to exclude ns:
         if re.match(r'c\d{0,2}$|^c$', ancestor_tag): 
             is_first_gen_c = ET.QName(ancestor.getparent().tag).localname == 'dsc' # because all first gen 'c'/cxx' are defined here as direct children of <dsc>
             #is_series = ancestor.attrib.get('level') == 'series' # because not all first_gen_c's are an archival/ASpace 'Series'
@@ -351,27 +278,33 @@ def convert_to_roman(num):
 
 # DATA PROCESSING FOR FOLDER AND BOX MANAGEMENT
 
-def has_explicit_folder_numbering(did_element, containers, ancestor_data, ead_version):
-    type_attr = 'type' if ead_version == 'ead2002' else 'localtype'
-    container_type_attr = 'altrender' if ead_version == 'ead2002' else 'encodinganalog'
+def has_explicit_folder_numbering(did_element, containers, ancestor_data=None):
+    """populates df when folders are explicitly numbered
+    This function supplies folder numbers as string/text
+    ancester_data is set to None because some terminal c nodes representing "file"-level description are not a series, and yet have no ancestor c nodes either. If not set to None, it'll cause an error"""
     
-    folder_container = next(elem for elem in containers if elem.attrib.get(type_attr, '').lower() == 'folder')
+    folder_container = next(elem for elem in containers if elem.attrib.get('type', '').lower() == 'folder')
     folder_text = folder_container.text.lower()
-    box_number = extract_box_number(did_element, namespaces, ead_version)
-    container_element = did_element.find('./ns:container', namespaces=namespaces)
-    container_type = container_element.attrib.get(container_type_attr, None) if container_element is not None else None
+    box_number = extract_box_number(did_element, namespaces)
+    container_element = did_element.find('./ns:container', namespaces=namespaces)  # find the container element
+    container_type = container_element.attrib.get('altrender', None) if container_element is not None else None  # get altrender attribute, if it exists
     base_title = extract_base_folder_title(did_element, namespaces)
-    date = extract_folder_date(did_element, namespaces, ead_version)
+    date = extract_folder_date(did_element, namespaces)
+
     ancestor_values = ancestor_data
-    ancestor_values += [None] * (5 - len(ancestor_values))
-    
+    ancestor_values += [None] * (5 - len(ancestor_values)) # '5' for the 5 <cxx> ancestor columns in folder_df
     
     start, end = None, None
+    # if a range of folders
     if '-' in folder_text:
+        # Split and filter non-numeric characters
         start, end = folder_text.split('-')
         start = re.sub(r'\D', '', start)
         end = re.sub(r'\D', '', end)
+
+        # Convert to integers
         start, end = int(start), int(end)
+        
         for i in range(start, end + 1):
             folder_title = f"{base_title} [{i - start + 1} of {end - start + 1}]"
             df_row = [collection_name, call_number, box_number, str(i), container_type] + ancestor_values + [folder_title, date]
@@ -381,31 +314,32 @@ def has_explicit_folder_numbering(did_element, containers, ancestor_data, ead_ve
         df_row = [collection_name, call_number, box_number, folder_number, container_type] + ancestor_values + [base_title, date]
         folder_df.loc[len(folder_df)] = df_row
 
-def has_implicit_folder_numbering(did_element, ancestor_data, ead_version):
-    box_number = extract_box_number(did_element, namespaces, ead_version)
-    container_element = did_element.find('./ns:container', namespaces=namespaces)
-    container_type = container_element.attrib.get('altrender', None) if container_element is not None else None
-    base_title = extract_base_folder_title(did_element, namespaces)
-    date = extract_folder_date(did_element, namespaces, ead_version)
-    ancestor_values = ancestor_data
-    ancestor_values += [None] * (5 - len(ancestor_values))
+def has_implicit_folder_numbering(did_element, ancestor_data=None):
+    """ populates df row when either folders are not numbered or 'folder(s)' is not mentioned at all in the text node of where we should find folder number/extent information.
+    The function itself does not supply folder numbers, hence "None" at idx 3 in df_row population. Prepend_or_fill function handles that, I think.
+    I've seen a situation where there's more than 2 <physdesc> inside one terminal node "Hello Henri Chopin!"
+    But anyways, that would rarely be a problem because it'll most likely be because it wouldn't be about physical folders, perhaps intangible, discrete items
+    ancester_data is set to None because some terminal c nodes representing file level description are no series yet have no ancestor c nodes"""
     
-    physdesc_xpath = './ns:physdesc/ns:extent' if ead_version == 'ead2002' else './ns:physdescstructured'
-    physdesc_elements = did_element.findall(physdesc_xpath, namespaces=namespaces)
-    folder_count = None
-    for physdesc in physdesc_elements:
-        if ead_version == 'ead2002':
-            extent_text = physdesc.text
-            integer_match = re.search(r'\b[1-9]\d*\b', extent_text)
-            if integer_match:
-                folder_count = int(integer_match.group())
-                break
-        else:
-            quantity_elem = physdesc.find('./ns:quantity', namespaces=namespaces)
-            if quantity_elem is not None:
-                folder_count = int(quantity_elem.text)
-                break
+    box_number = extract_box_number(did_element, namespaces)
+    container_element = did_element.find('./ns:container', namespaces=namespaces)  # find the container element
+    container_type = container_element.attrib.get('altrender', None) if container_element is not None else None  # get altrender attribute, if it exists. in ArchivesSpace EAD2002, @altrender is used to indicate container type
+    base_title = extract_base_folder_title(did_element, namespaces)
+    date = extract_folder_date(did_element, namespaces)
 
+    ancestor_values = ancestor_data
+    ancestor_values += [None] * (5 - len(ancestor_values)) # '5' as limit to number of <cxx> ancestor columns in folder_df. 
+    
+    physdesc_elements = did_element.findall('./ns:physdesc/ns:extent', namespaces=namespaces)
+    folder_count = None
+    for extent in physdesc_elements:
+        extent_text = extent.text
+        integer_match = re.search(r'\b[1-9]\d*\b', extent_text) # Modified regex to exclude zero because of Ackroyd EAD or some other legacy EADs having '0' in <extent>
+        if integer_match:
+            folder_count = int(integer_match.group())
+            break  # Stop after finding the first valid integer
+
+    # Use folder_count to populate df_row
     if folder_count is not None:
         if folder_count != 1:
             for i in range(1, folder_count + 1):
@@ -416,9 +350,10 @@ def has_implicit_folder_numbering(did_element, ancestor_data, ead_version):
             df_row = [collection_name, call_number, box_number, None, container_type] + ancestor_values + [base_title, date]
             folder_df.loc[len(folder_df)] = df_row
     else:
+        # Handle the case where no valid folder count is found
         df_row = [collection_name, call_number, box_number, None, container_type] + ancestor_values + [base_title, date]
         folder_df.loc[len(folder_df)] = df_row
-      
+
 def prepend_or_fill(column_name, x, idx):
     prefix = "Box " if column_name == 'BOX' else "Folder "
     if pd.notnull(x):  # If the cell has a value, it must be INTEGER. If Box, 
@@ -598,7 +533,6 @@ def process_series_selection(folder_df, box_df, working_directory, collection_na
     if unknown_series_present:
         ordered_series.append('Unknown series (CAUTION: choosing this might cause unexpected behavior in the program)')
 
-    # Display the series options to the user
     display_options(ordered_series, "series")
 
     while True:
@@ -635,20 +569,12 @@ def process_box_selection(box_df, folder_df, working_directory, collection_name,
     box_list = sorted(box_df['BOX'].tolist(), key=custom_sort_key)
     
     # Display options in columns
-    num_columns = (len(box_list) + 49) // 50  # Calculate the number of columns needed. Each column will have 50 box options. I can change this to 30 if I want to display 30 boxes per column.
-    column_data = [[] for _ in range(num_columns)]  # Create a list of empty lists for each column
-    for i, box in enumerate(box_list):  # Iterate over the box_list with index and value
-        column_index = i // 50  # Calculate the column index for the current box
-        column_data[column_index].append(f"({i+1:{2 if i >= 9 else 1}d})  Box {box}")  # Add the formatted box option to the corresponding column
-    
-    for i in range(50):  # Iterate over the rows
-        row_data = []  # Create an empty list for the current row
-        for j in range(num_columns):  # Iterate over the columns
-            if i < len(column_data[j]):  # Check if the current row index is within the range of the column data
-                row_data.append(column_data[j][i])  # Add the box option to the current row
-            else:
-                row_data.append(" " * len(column_data[j-1][i]))  # Add empty spaces to align the columns
-        print("  ".join(row_data))  # Print the row data with column spacing
+    num_columns = (len(box_list) + 29) // 30  # Calculate the number of columns needed
+    for i in range(0, len(box_list), 30):
+        column_options = box_list[i:i+30]
+        print("\n".join("{:2d}. {}".format(idx+1, option) for idx, option in enumerate(column_options, start=i)))
+        if num_columns > 1:
+            print("\t\t", end="")  # Add tab space between columns
 
     while True:
         try:
@@ -1109,46 +1035,32 @@ else:
     # Running as a normal Python script
     working_directory = os.path.dirname(os.path.abspath(__file__))
 
-# Initialize namespaces dictionary here to be dynamically set later
-namespaces = {}
 
-# Processing EAD files from the working directory
-collection_info = process_ead_files(working_directory)
-
-# Give user option to (1) proceed in cases where len(collection) > 1, (2) go back to user_select_collection function menu of collection options to choose a different collection, or (3) exit the program.
+namespaces = {'ns': 'urn:isbn:1-931666-22-9'}
+collection_info = process_ead_files(working_directory, namespaces)
 
 if collection_info is not None:
-    # Initialize DataFrame structures
+    # Initialize folder and box dataframes with preset headers
+    
     folder_df = pd.DataFrame(columns=['COLLECTION', 'CALL_NO.', 'BOX', 'FOLDER', 'CONTAINER_TYPE',
                                       'C01_ANCESTOR', 'C02_ANCESTOR', 'C03_ANCESTOR', 'C04_ANCESTOR', 'C05_ANCESTOR', 'FOLDER TITLE', 'FOLDER DATES']).astype('object')
+    
     box_df = pd.DataFrame(columns=['REPOSITORY', 'COLLECTION', 'CALL_NO.', 'BOX', 'FOLDER_COUNT', 'FIRST_FOLDER', 'LAST_FOLDER', 'CONTAINER_TYPE', 
                                    'FIRST_C01_SERIES', 'SECOND_C01_SERIES', 'THIRD_C01_SERIES', 'FOURTH_C01_SERIES', 'FIFTH_C01_SERIES']).astype('object')
 
     # Extract general relevant data
     tree = ET.parse(collection_info["path"])
     root = tree.getroot()
-    set_namespace(root)  # Ensure the namespace is set based on this document
-    
-    
-    # Display general collection information
-    ead_version = collection_info["ead_version"]
-    print(f"\nEAD Version: {ead_version}")
     collection_name = collection_info["name"]
-    print(f"\nCollection: {collection_name}")
-    repository_name = collection_info["repository"]
-    print(f"\nRepository: {repository_name}")
     call_number = collection_info["number"]
-    print(f"\nCall Number: {call_number}")
+    repository_name = collection_info["repository"]
     finding_aid_author = collection_info["author"]
-    print(f"\nFinding aid authored: {finding_aid_author}")
     
-    
-    # Use the correct namespace in the find method
     dsc_element = root.find('.//ns:dsc', namespaces=namespaces)
-    print(f"\nProcessing {collection_name} : {call_number}")
     
-    #print("\nDebug: Namespaces used in dsc_element search:", namespaces)
-
+    print(f"\nProcessing {collection_name} : {call_number}")
+    # print(f"-- {finding_aid_author}")
+    
     # To tell which function was used more (folders numbered vs folder unnumbered)
     has_explicit_folder_numbering_count = 0
     has_implicit_folder_numbering_count = 0
@@ -1157,6 +1069,7 @@ if collection_info is not None:
         # regex to cater for both numbered/unnumbered c elements
         all_c_elements = [elem for elem in dsc_element.iterdescendants() if re.match(r'c\d{0,2}$|^c$', ET.QName(elem.tag).localname)]
 
+    # traverse every c component that is a terminal node
     for elem in all_c_elements:
         try:
             if is_terminal_node(elem):
@@ -1165,26 +1078,33 @@ if collection_info is not None:
                 
                 if did_element is not None:
                     
+                    # BRBL EADs have two types of folder numbering: explicit and implicit. 
+                    # The explicit type is expressed in the terminal c node where we find folder/file level information. 
+                    # For example, if we see 'type="folder">600<', we can tell explicitly that this is one folder, and it is the 600th folder in the sequence. 
+                    # There are at least three ways the implicit type is expressed:
+                    # 1. There is no explicit folder numbering in the terminal c node.
+                    # 2. There is only one container element in the terminal c node, and it is for the box only.
+                    # 3. There are no container elements at all. In this case, the terminal c node itself represents a folder/level description.
+                    # Container_count indicates whether folders are explicitly numbered or not. 
+                    # If there are two container elements in the terminal c node, then the folders are explicitly numbered (one container for the box and the other for the folder). 
+                    # If there is only one container element, then there is no explicit folder numbering, and that container element is for the box only. 
+                    # We use the has_implicit_folder_numbering function to handle the implicit folder numbering cases.
                     containers = [elem for elem in did_element.iterchildren() if ET.QName(elem.tag).localname == 'container']
                     container_count = len(containers)
 
-                    # 06-04-2024: Added check for 'localtype' attribute for EAD3 compatibility
-                    has_folder = any(elem.attrib.get('type', '').lower() == 'folder' for elem in containers)  # EAD2002
-                    has_folder |= any(elem.attrib.get('localtype', '').lower() == 'folder' for elem in containers)  # EAD3
-
-                    has_box = any(elem.attrib.get('type', '').lower() == 'box' for elem in containers)  # EAD2002
-                    has_box |= any(elem.attrib.get('localtype', '').lower() == 'box' for elem in containers)  # EAD3
+                    has_folder = any(elem.attrib.get('type', '').lower() == 'folder' for elem in containers)
+                    has_box = any(elem.attrib.get('type', '').lower() == 'box' for elem in containers)
 
                     if container_count >= 2 and has_folder:
-                        has_explicit_folder_numbering(did_element, containers, ancestor_data, ead_version)
+                        has_explicit_folder_numbering(did_element, containers, ancestor_data)
                         has_explicit_folder_numbering_count += 1
                         
                     elif container_count == 1 and has_box:
-                        has_implicit_folder_numbering(did_element, ancestor_data, ead_version)
+                        has_implicit_folder_numbering(did_element, ancestor_data)
                         has_implicit_folder_numbering_count += 1
     
                     else:
-                        has_implicit_folder_numbering(did_element, ancestor_data, ead_version)
+                        has_implicit_folder_numbering(did_element, ancestor_data)
                         has_implicit_folder_numbering_count += 1
                         
         except Exception as e:
@@ -1216,7 +1136,6 @@ if collection_info is not None:
     # if has_explicit_folder_numbering_count > has_implicit_folder_numbering_count:
     #    print(f"Love it when all the folders are numbered!\n")
     
-    # Let's store if has_implicit_folder_numbering_count > has_explicit_folder_numbering_count in a variable to use later
     if has_implicit_folder_numbering_count > has_explicit_folder_numbering_count:
         print(f"\nOh boy! The folders have not been numbered; maybe I can help ;)\n")
 
@@ -1249,8 +1168,7 @@ if collection_info is not None:
     
     # Finalizing base box_df based on folder numbering/user preferences:
     
-    # '1' for continuous, 
-    # '2' for non-continuous:
+    # '1' for continuous, '2' for non-continuous:
     if folders_already_numbered or folder_numbering_preference == "1":
         folder_df['BOX'] = [prepend_or_fill('BOX', val, idx) for idx, val in enumerate(folder_df['BOX'])]
         folder_df['FOLDER'] = [prepend_or_fill('FOLDER', val, idx) for idx, val in enumerate(folder_df['FOLDER'])]
@@ -1366,17 +1284,15 @@ if len(folder_df) < 1234: # '1234' just cos.
 else:
     logging.info('Large collection detected with more than 1000 folders.')
     print("\nThis collection's so yuuuge I almost lost my mind counting up the folders! Hahaha :D\n")
-    print("Consider SPECIFYing your needs for faster processing; otherwise, processing might take longer...")
-
+    print("Consider SPECIFYing your needs for faster processing; otherwise, processing might take longer...\n")
 
 while True:
-    try: # If implicit folder numbering is more than explicit folder numbering, let's give the user option to go back and choose a different numbering preference. If explicit folder numbering is more than implicit folder numbering, let's give the user option to proceed to the label generation menu.
+    try:
         main_label_menu_choice = input(
             "\nPlease choose a labeling option, or press 'q', and 'Enter' to exit: \n\n"
             "1. Default folder, default box \n"
             "2. Default folder, custom box \n"
             "3. SPECIFY (specify by series/box number(s), choose left labels, custom box labels, combo, default folder/box labels etc?)\n\n"
-            # Insert option to go back
             "Note: \n"
             "'Default folder' means left- and right-handed label pairs \n"
             "'Default box' means Paige- or Full Hollinger-size type labels \n"
@@ -1519,7 +1435,7 @@ while True:
                 
         elif main_label_menu_choice == "q":
             print("\nExiting program...Thanks, and have a great day!")
-            sys.exit()
+            break
             
         else:
             print("\nWrong input. Please enter a valid choice.\n")
