@@ -1,5 +1,5 @@
 
-*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********
+*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT
 
 Label Generator: Quick Guide
 
@@ -45,9 +45,9 @@ Running the Program
 4.	Select your EAD file from the list presented (if multiple files are present).
 
 5.	Customize your labels:
-				Choose to print box labels, folder labels, or both.
-				Select specific series or box numbers.
-				Opt for customized labels if the boxes contain container type information.
+		Choose to print box labels, folder labels, or both.
+		Select specific series or box numbers.
+		Opt for customized labels if the boxes contain container type information.
 6.	Generate and print:
 				The program will create the labels as Word documents, saved within the "Label Generator" folder, ready for printing.
 
