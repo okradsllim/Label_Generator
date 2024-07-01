@@ -1,5 +1,5 @@
 
-*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********
+*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT*********DRAFT
 
 Label Generator: Quick Guide
 
@@ -22,7 +22,7 @@ A) Enable Macros in Microsoft Word
 	1.	Open Microsoft Word.
 	2.	Go to 'File' > 'Options' at the bottom.
 	3.	In the left pane, select 'Trust Center' and click on 'Trust Center Settings...'.
-	4.	Choose 'Enable all Macros' (Note: This is temporarily required for functionality, though it is the least secure option. Our organization’s network security measures are in place as a 		safeguard. Future updates will address this security concern).
+	4.	Choose 'Enable all Macros' (Note: This is temporarily required for functionality, though it is the least secure option. Our organization’s network security measures are in place as a safeguard. Future updates will address this security concern).
 
 B) Prepare the Label Generator Folder
 Navigate to ...MSSUNIT\Finding Aids\Labels\.
