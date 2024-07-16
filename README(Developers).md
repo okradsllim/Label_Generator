@@ -182,5 +182,5 @@ Common issues and their solutions:
 2. **Mail merge failures**: Ensure Microsoft Word is properly configured with macros enabled.
 3. **Unexpected box/folder numbering**: Check the EAD structure and adjust extraction logic if necessary.
 
-For further assistance or to report bugs, please contact the development team.
+For further assistance or to report bugs, please contact [Will](mailto:william.nyarko@yale.edu).
 ```
