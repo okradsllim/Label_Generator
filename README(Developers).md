@@ -28,20 +28,18 @@ The Label Generator is a Python-based tool designed to create archival box and f
 
 ## Project Structure
 
-```
-LABEL_GENERATOR/
-│
-├── Label_Generator.py
-├── default_folder_template.docm
-├── box_template_continuous_numbering.docm
-├── box_template_non_continuous_numbering.docm
-├── left_labels_folder_template.docm
-├── vertical_half_holl_continuous_numbering.docm
-├── vertical_half_holl_non_continuous_numbering.docm
-├── half_horizontal_holl_continuous_numbering.docm
-├── half_horizontal_holl_non_continuous_numbering.docm
-└── README.md
-```
+- LABEL_GENERATOR/
+  - Label_Generator.py
+  - default_folder_template.docm
+  - box_template_continuous_numbering.docm
+  - box_template_non_continuous_numbering.docm
+  - left_labels_folder_template.docm
+  - vertical_half_holl_continuous_numbering.docm
+  - vertical_half_holl_non_continuous_numbering.docm
+  - half_horizontal_holl_continuous_numbering.docm
+  - half_horizontal_holl_non_continuous_numbering.docm
+  - README.md
+  - README-dev.md
 
 ## Key Components
 
