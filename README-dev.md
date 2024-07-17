@@ -1,5 +1,3 @@
-
-```markdown
 # Label Generator - Developer Documentation
 
 ## Table of Contents
