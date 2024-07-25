@@ -4,6 +4,7 @@ theme: jekyll-theme-cayman
 
 nav:
   - Home: "/"
+  - Introduction: "/introduction"
   - Getting Started: "/getting-started"
   - Using Label Generator: "/using-label-generator"
   - Technical Description: "/technical-description"
@@ -11,3 +12,4 @@ nav:
   - Troubleshooting: "/troubleshooting"
   - FAQ: "/faq"
   - Contact: "/contact"
+  - Version History: "/version-history"
