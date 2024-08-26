@@ -1,0 +1,15 @@
+title: Label Generator Documentation
+description: Documentation for Label Generator (EAD2002 and EAD3 compatible)
+theme: jekyll-theme-cayman
+
+nav:
+  - Home: "/"
+  - Introduction: "/introduction"
+  - Getting Started: "/getting-started"
+  - Using Label Generator: "/using-label-generator"
+  - Technical Description: "/technical-description"
+  - Developer Guide: "/developer-guide"
+  - Troubleshooting: "/troubleshooting"
+  - FAQ: "/faq"
+  - Contact: "/contact"
+  - Version History: "/version-history"
