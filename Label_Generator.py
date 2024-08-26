@@ -111,34 +111,30 @@ def process_ead_files(working_directory):
                 namespace_uri = set_namespace(root)
                 namespaces['ns'] = namespace_uri
 
-                # Debug print to check which namespace is used
-                #print(f"Processing {file_path} using namespace: {namespaces['ns']}")
-                repository_element = root.find('./ns:archdesc/ns:did/ns:repository/ns:corpname', namespaces=namespaces)
-                #print(f"Repository element{repository_element}")
+                ead_version = 'ead2002' if namespace_uri == 'urn:isbn:1-931666-22-9' else 'ead3'
+
+                if ead_version == 'ead2002':
+                    repository_element = root.find('./ns:archdesc/ns:did/ns:repository/ns:corpname', namespaces=namespaces)
+                    finding_aid_author_element = root.find('./ns:eadheader/ns:filedesc/ns:titlestmt/ns:author', namespaces=namespaces)
+                else:  # ead3
+                    repository_element = root.find('./ns:control/ns:filedesc/ns:publicationstmt/ns:publisher', namespaces=namespaces)
+                    finding_aid_author_element = root.find('./ns:control/ns:filedesc/ns:titlestmt/ns:author', namespaces=namespaces)
+
                 collection_name_element = root.find('./ns:archdesc/ns:did/ns:unittitle', namespaces=namespaces)
-                #print(f"Collection name element{collection_name_element}")
                 call_num_element = root.find('./ns:archdesc/ns:did/ns:unitid', namespaces=namespaces)
-                #print(f"Call number element{call_num_element}")
-                finding_aid_author_element = root.find('./ns:eadheader/ns:filedesc/ns:titlestmt/ns:author', namespaces=namespaces)
-                #print(f"Finding aid author element{finding_aid_author_element}")
                 
                 repository_name = repository_element.text if repository_element is not None else "Unknown Repository"
-                print(repository_name)
                 collection_name = collection_name_element.text if collection_name_element is not None else "Unknown Collection"
-                #print(collection_name)
                 call_number = call_num_element.text if call_num_element is not None else "Unknown Call Number"
-                #print(call_number)
-                finding_aid_author = finding_aid_author_element.text if finding_aid_author_element is not None else "by Unknown Author"
-                #print(finding_aid_author)
+                finding_aid_author = finding_aid_author_element.text if finding_aid_author_element is not None else "Unknown Author"
 
-                # Store collection data with additional metadata
                 collections.append({
                     "path": processed_file, 
                     "name": collection_name,
                     "number": call_number, 
                     "repository": repository_name, 
                     "author": finding_aid_author,
-                    "ead_version": "ead2002" if namespace_uri == 'urn:isbn:1-931666-22-9' else "ead3", 
+                    "ead_version": ead_version, 
                     "namespaces": namespaces
                 })
 
@@ -358,8 +354,12 @@ def has_explicit_folder_numbering(did_element, containers, ancestor_data, ead_ve
     folder_container = next(elem for elem in containers if elem.attrib.get(type_attr, '').lower() == 'folder')
     folder_text = folder_container.text.lower()
     box_number = extract_box_number(did_element, namespaces, ead_version)
-    container_element = did_element.find('./ns:container', namespaces=namespaces)
-    container_type = container_element.attrib.get(container_type_attr, None) if container_element is not None else None
+    
+    # Find the box container or any container with 'Box' as its localtype
+    box_container = next((elem for elem in containers if elem.attrib.get(type_attr, '').lower() == 'box' or
+                          elem.attrib.get('localtype', '').lower() == 'box'), None)
+    
+    container_type = box_container.attrib.get(container_type_attr, None) if box_container is not None else None
     base_title = extract_base_folder_title(did_element, namespaces)
     date = extract_folder_date(did_element, namespaces, ead_version)
     ancestor_values = ancestor_data
@@ -382,9 +382,12 @@ def has_explicit_folder_numbering(did_element, containers, ancestor_data, ead_ve
         folder_df.loc[len(folder_df)] = df_row
 
 def has_implicit_folder_numbering(did_element, ancestor_data, ead_version):
+    type_attr = 'type' if ead_version == 'ead2002' else 'localtype'
+    container_type_attr = 'altrender' if ead_version == 'ead2002' else 'encodinganalog'
+    
     box_number = extract_box_number(did_element, namespaces, ead_version)
     container_element = did_element.find('./ns:container', namespaces=namespaces)
-    container_type = container_element.attrib.get('altrender', None) if container_element is not None else None
+    container_type = container_element.attrib.get(container_type_attr, None) if container_element is not None else None
     base_title = extract_base_folder_title(did_element, namespaces)
     date = extract_folder_date(did_element, namespaces, ead_version)
     ancestor_values = ancestor_data
@@ -1140,7 +1143,7 @@ if collection_info is not None:
     call_number = collection_info["number"]
     print(f"\nCall Number: {call_number}")
     finding_aid_author = collection_info["author"]
-    print(f"\nFinding aid authored: {finding_aid_author}")
+    print(f"\nFinding aid author (ed): {finding_aid_author}")
     
     
     # Use the correct namespace in the find method
@@ -1365,7 +1368,7 @@ if len(folder_df) < 1234: # '1234' just cos.
 
 else:
     logging.info('Large collection detected with more than 1000 folders.')
-    print("\nThis collection's so yuuuge I almost lost my mind counting up the folders! Hahaha :D\n")
+    print("\nWoah! This collection's enormous! I almost lost my mind counting up the folders! Hahaha :D\n")
     print("Consider SPECIFYing your needs for faster processing; otherwise, processing might take longer...")
 
 
